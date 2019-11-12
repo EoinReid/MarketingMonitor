@@ -15,5 +15,5 @@ import java.util.List;
 
 
 public interface TestDaoI {
-    
+    public String testCon() throws DaoException;
 }
