@@ -16,4 +16,5 @@ import java.util.List;
 
 public interface TestDaoI {
     public String testCon() throws DaoException;
+    public User Login() throws DaoException;
 }
