@@ -142,8 +142,9 @@ public class Server {
         }
     }
     
-    public void ebayCall(){
+    public void testebayCall(){
         try{
+            //test call to see if ebay connection can be established.
              System.out.print("\n");
 	        System.out.print("+++++++++++++++++++++++++++++++++++++++\n");
 	        System.out.print("+ Welcome to eBay SDK for Java Sample +\n");
