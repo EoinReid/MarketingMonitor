@@ -172,7 +172,7 @@ public class Server {
     
     private static ApiContext getApiContext() throws IOException {
 		  
-		  String input;
+              String input;
 	      ApiContext apiContext = new ApiContext();
 	      
 	      //set Api Token to access eBay Api Server
