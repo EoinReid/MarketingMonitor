@@ -70,4 +70,134 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         
     }
     
+    @Override
+    public User Login(int mId) throws DaoException {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        User u = null;
+        try {
+            con = this.getConnection();
+
+            String query = "SELECT username, password FROM users WHERE username = ?";
+            ps = con.prepareStatement(query);
+            ps.setInt(1, mId);
+
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                String username = rs.getString("username");
+                String password = rs.getString("password");
+                u = new User(username,password);
+            }
+        } catch (SQLException e) {
+            throw new DaoException("Login() " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("Login() " + e.getMessage());
+            }
+        }
+        return u;     // u may be null 
+    }
+    
+    
+    //This method returns the title and price an ad that meets a certain keyword search
+        @Override
+    public ad findAd(String akeyword) throws DaoException {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        ad a = null;
+
+        try {
+            //Get connection object using the methods in the super class (MySqlDao.java)...
+            con = this.getConnection();
+
+            String query = "SELECT title, price FROM adds WHERE Description like %?%";
+            ps = con.prepareStatement(query);
+            ps.setString(1, akeyword);
+
+            //Using a PreparedStatement to execute SQL...
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String title = rs.getString("Title");
+                Double price = rs.getDouble("Price");
+                a = new ad();
+
+            }
+        } catch (SQLException e) {
+            throw new DaoException("adChecker() " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("adChecker() " + e.getMessage());
+            }
+        }
+        return a;     
+    }
+    
+    //This Methord returns the list of prices of items that meet the keyword search
+        @Override
+    public List<Double> PriceCompare(String akeyword) throws DaoException {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        double price;
+        List<Double> prices = new ArrayList<>();
+        
+        try {
+            //Get connection object using the methods in the super class (MySqlDao.java)...
+            con = this.getConnection();
+
+            String query = "SELECT title, price FROM adds WHERE Title like %?%";
+            ps = con.prepareStatement(query);
+            ps.setString(1, akeyword);
+
+            //Using a PreparedStatement to execute SQL...
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+             price = rs.getDouble("Price");
+             prices.add(price);
+            }
+            
+        } catch (SQLException e) {
+            throw new DaoException("PriceCompare()" + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("PriceCompare() " + e.getMessage());
+            }
+        }
+        return prices;     
+    }
+    
 }
