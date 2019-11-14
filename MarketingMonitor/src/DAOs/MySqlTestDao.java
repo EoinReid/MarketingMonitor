@@ -13,6 +13,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import static java.util.Collections.list;
 import java.util.List;
+import DTOs.Ad;
+import DTOs.User;
 
 
 /**
@@ -111,12 +113,12 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
     
     //This method returns the title and price an ad that meets a certain keyword search
-        @Override
-    public ad findAd(String akeyword) throws DaoException {
+    @Override 
+    public Ad findAd(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        ad a = null;
+        Ad a = null;
 
         try {
             //Get connection object using the methods in the super class (MySqlDao.java)...
@@ -132,11 +134,11 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             while (rs.next()) {
                 String title = rs.getString("Title");
                 Double price = rs.getDouble("Price");
-                a = new ad();
+                a = new Ad();
 
             }
         } catch (SQLException e) {
-            throw new DaoException("adChecker() " + e.getMessage());
+            throw new DaoException("AdChecker() " + e.getMessage());
         } finally {
             try {
                 if (rs != null) {
@@ -156,7 +158,7 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     }
     
     //This Methord returns the list of prices of items that meet the keyword search
-        @Override
+    @Override
     public List<Double> PriceCompare(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;

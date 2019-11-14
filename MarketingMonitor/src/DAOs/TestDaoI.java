@@ -12,9 +12,13 @@ package DAOs;
 
 import Exceptions.DaoException;
 import java.util.List;
+import DTOs.Ad;
+import DTOs.User;
 
 
 public interface TestDaoI {
     public String testCon() throws DaoException;
     public User Login() throws DaoException;
+    public Ad findAd() throws DaoException;
+    public List<Double> PriceCompare() throws DaoException;
 }
