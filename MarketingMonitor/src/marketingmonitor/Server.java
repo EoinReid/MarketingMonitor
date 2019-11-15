@@ -27,6 +27,7 @@ import com.ebay.sdk.ApiContext;
 import com.ebay.sdk.ApiCredential;
 import com.ebay.sdk.helper.ConsoleUtil;
 import com.ebay.sdk.call.GeteBayOfficialTimeCall;
+import java.util.Scanner;
 /**
  *
  * @author tiarn
@@ -48,7 +49,7 @@ public class Server {
     public void start() {
         try {
             
-             testDao = new MySqlTestDao();
+            // testDao = new MySqlTestDao();
             
             
             logFile = new FileHandler("Server.log",true);
@@ -57,8 +58,7 @@ public class Server {
             
             LOGGER.info("Server Starting....");
             
-            ServerSocket ss = new ServerSocket(8080);  // set up ServerSocket to listen for connections on port 8080
-
+            ServerSocket ss = new ServerSocket(8080);  // set up ServerSocket to listen for connections on port 8080           
             System.out.println("Server: Server started. Listening for connections on port 8080...");
 
             int clientNumber = 0;  // a number for clients that the server allocates as clients connect
@@ -67,6 +67,14 @@ public class Server {
             {
                 Socket socket = ss.accept();    // listen (and wait) for a connection, accept the connection, 
                 // and open a new socket to communicate with the client
+                Scanner in = new Scanner(socket.getInputStream());
+                String un = in.nextLine();
+                String pw = in.nextLine();
+                
+                System.out.println("Server message: Received from client : \"" + un + "\"" + pw + "\"");
+                           
+                OutputStream os = socket.getOutputStream();
+                PrintWriter out = new PrintWriter(os, true);
                 clientNumber++;
 
                 LOGGER.log(Level.INFO, "A Client has connected from the address: {0}", socket.getInetAddress());

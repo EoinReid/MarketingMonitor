@@ -3,6 +3,13 @@
  */
 package marketingmonitor;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author eoire
@@ -56,6 +63,11 @@ public class login extends javax.swing.JFrame {
         jUsername.setText("username");
 
         jbtnLogin.setText("Log in");
+        jbtnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbtnLoginMouseClicked(evt);
+            }
+        });
         jbtnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbtnLoginActionPerformed(evt);
@@ -97,6 +109,7 @@ public class login extends javax.swing.JFrame {
         );
 
         jPanel2.setBackground(new java.awt.Color(36, 147, 191));
+        jPanel2.setForeground(new java.awt.Color(36, 147, 191));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 72)); // NOI18N
         jLabel4.setText("M");
@@ -144,7 +157,24 @@ public class login extends javax.swing.JFrame {
       String pw = jPassword.getText();
       String un = jUsername.getText();
      
+        try {
+            Socket socket = new Socket("localhost", 8080);  // connect to server socket
+             OutputStream os = socket.getOutputStream();
+            
+            PrintWriter out = new PrintWriter(os, true);
+            out.write(un+"\n");  // write command to socket, and newline terminator
+            out.write(pw+"\n");  // write command to socket, and newline terminator
+            out.flush();              // flush (force) the command over the socket
+        } catch (IOException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+     
     }//GEN-LAST:event_jbtnLoginActionPerformed
+
+    private void jbtnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbtnLoginMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnLoginMouseClicked
 
     /**
      * @param args the command line arguments

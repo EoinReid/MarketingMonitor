@@ -5,6 +5,8 @@
  */
 package DAOs;
 
+import DTOs.User;
+import DTOs.Ad;
 import Exceptions.DaoException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,11 +17,12 @@ import static java.util.Collections.list;
 import java.util.List;
 
 
+
 /**
  *
  * @author tiarn
  */
-public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
+public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
     @Override
     
@@ -70,7 +73,6 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         
     }
     
-    @Override
     public User Login(int mId) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
@@ -111,12 +113,12 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
     
     //This method returns the title and price an ad that meets a certain keyword search
-        @Override
-    public ad findAd(String akeyword) throws DaoException {
+  
+    public Ad findAd(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        ad a = null;
+        Ad a = null;
 
         try {
             //Get connection object using the methods in the super class (MySqlDao.java)...
@@ -132,7 +134,7 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             while (rs.next()) {
                 String title = rs.getString("Title");
                 Double price = rs.getDouble("Price");
-                a = new ad();
+                a = new Ad();
 
             }
         } catch (SQLException e) {
@@ -155,8 +157,7 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         return a;     
     }
     
-    //This Methord returns the list of prices of items that meet the keyword search
-        @Override
+    //This Methord returns the list of prices of items that meet the keyword search       
     public List<Double> PriceCompare(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;

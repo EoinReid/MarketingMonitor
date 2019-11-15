@@ -10,6 +10,7 @@ package DAOs;
  * @author tiarn
  */
 
+import DTOs.User;
 import Exceptions.DaoException;
 import java.util.List;
 
