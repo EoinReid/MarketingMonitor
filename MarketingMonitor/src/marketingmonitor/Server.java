@@ -28,6 +28,7 @@ import com.ebay.sdk.ApiCredential;
 import com.ebay.sdk.call.GetItemCall;
 import com.ebay.sdk.helper.ConsoleUtil;
 import com.ebay.sdk.call.GeteBayOfficialTimeCall;
+import com.ebay.soap.eBLBaseComponents.DetailLevelCodeType;
 
 /**
  *
@@ -175,12 +176,10 @@ public class Server {
             ApiContext apiContext = getApiContext();
 
             // [Step 2] Create call object and execute the call
-            GetItemCall apiCall = new GetItemCall(apiContext);
-            System.out.println("Begin to call eBay API, please wait ... ");
-             = apiCall.getItem();
-            System.out.println("End to call eBay API, show call result ...");
+          
 
             // [Setp 3] Handle the result returned
+            // This will send the returned info to the client
             System.out.println("Official eBay Time : " + cal.getTime().toString());
         } catch (Exception e) {
             System.out.println("Failed to get add");
@@ -196,15 +195,41 @@ public class Server {
 
         //set Api Token to access eBay Api Server
         ApiCredential cred = apiContext.getApiCredential();
-        input = ConsoleUtil.readString("Enter your eBay Authentication Token: ");
+        input = ConsoleUtil.readString("AidanVau-MarketMo-SBX-53882c1d0-4dde0f4d");
 
         cred.seteBayToken(input);
 
         //set Api Server Url
-        input = ConsoleUtil.readString("Enter eBay SOAP server URL (e.g., https://api.sandbox.ebay.com/wsapi): ");
+        input = ConsoleUtil.readString("https://api.sandbox.ebay.com/wsapi");
 
         apiContext.setApiServerUrl(input);
 
         return apiContext;
+    }
+    
+    public String findEbayAd(String Keyword){
+        String ItemID = null;
+        
+        try {
+            //Finds the item ID of an add on ebay
+            
+            // [Step 1] Initialize eBay ApiContext object
+            System.out.println("===== [1] Account Information ====");
+            ApiContext apiContext = getApiContext();
+
+            // [Step 2] Create call object and execute the call
+            GeteBayOfficialTimeCall apiCall = new GeteBayOfficialTimeCall(apiContext);
+            System.out.println("Begin to call eBay API, please wait ... ");
+            Calendar cal = apiCall.geteBayOfficialTime();
+            System.out.println("End to call eBay API, show call result ...");
+
+            // [Setp 3] Handle the result returned
+            
+        } catch (Exception e) {
+            System.out.println("Fail to get eBay official time.");
+            e.printStackTrace();
+        }
+        
+        return ItemID;
     }
 }
