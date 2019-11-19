@@ -11,6 +11,7 @@ package DAOs;
  */
 
 import DTOs.User;
+import DTOs.Ad;
 import Exceptions.DaoException;
 import java.util.List;
 
@@ -18,4 +19,5 @@ import java.util.List;
 public interface TestDaoI {
     public String testCon() throws DaoException;
     public User Login() throws DaoException;
+    public Ad findAd() throws DaoException;
 }
