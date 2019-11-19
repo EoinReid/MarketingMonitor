@@ -73,6 +73,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         
     }
     
+    @Override
     public User Login(int mId) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
@@ -113,6 +114,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
     
     //This method returns the title and price an ad that meets a certain keyword search
+    @Override
     public Ad findAd(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
@@ -157,6 +159,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     }
     
 
+    @Override
     public List<Double> PriceCompare(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
@@ -199,5 +202,53 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         }
         return prices;     
     }
+    @Override
+    public Ad popularAd(String akeyword) throws DaoException {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Ad a = null;
+        
+        try {
+            //Get connection object using the methods in the super class (MySqlDao.java)...
+            con = this.getConnection();
+
+            String query = "SELECT title, price, view_Count FROM adds WHERE Description like %?% GROUP BY view_Count";
+            ps = con.prepareStatement(query);
+            ps.setString(1, akeyword);
+
+            //Using a PreparedStatement to execute SQL...
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String title = rs.getString("Title");
+                Double price = rs.getDouble("Price");
+                int view_Count = rs.getInt("View Count");
+                a = new Ad();
+
+            }
+        } catch (SQLException e) {
+            throw new DaoException("popularAd() " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("popularAd() " + e.getMessage());
+            }
+        }
+        
+        return a;
+    }
+    
+
+
     
 }

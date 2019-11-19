@@ -20,7 +20,8 @@ import DTOs.User;
 
 public interface TestDaoI {
     public String testCon() throws DaoException;
-    public User Login() throws DaoException;
-    public Ad findAd() throws DaoException;
-    public List<Double> PriceCompare() throws DaoException;
+    public User Login(int mId) throws DaoException;
+    public Ad findAd(String akeyword) throws DaoException;
+    public List<Double> PriceCompare(String akeyword) throws DaoException;
+    public Ad popularAd(String akeyword) throws DaoException;
 }
