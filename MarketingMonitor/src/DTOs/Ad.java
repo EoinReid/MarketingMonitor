@@ -28,10 +28,7 @@ public class Ad {
 
     public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time){
 
-    
-    //Need to add photo variable (Blob or as possible byte)
-
-    public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time){
+   
 
         this.type = type;
         this.title = title;

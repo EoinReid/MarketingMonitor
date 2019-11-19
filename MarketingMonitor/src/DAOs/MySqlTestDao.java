@@ -113,8 +113,6 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
     
     //This method returns the title and price an ad that meets a certain keyword search
-
-    @Override 
     public Ad findAd(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
@@ -159,7 +157,6 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     }
     
 
-    @Override
     public List<Double> PriceCompare(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;

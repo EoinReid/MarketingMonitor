@@ -30,6 +30,7 @@ import com.ebay.sdk.helper.ConsoleUtil;
 import com.ebay.sdk.call.GeteBayOfficialTimeCall;
 
 import com.ebay.soap.eBLBaseComponents.DetailLevelCodeType;
+import java.util.Scanner;
 
 /**
  *
@@ -52,7 +53,7 @@ public class Server {
     public void start() {
         try {
 
-            testDao = new MySqlTestDao();
+            testDao = new MySqlTestDao() {};
 
             logFile = new FileHandler("Server.log", true);
 
