@@ -28,6 +28,7 @@ import com.ebay.sdk.ApiCredential;
 import com.ebay.sdk.call.GetItemCall;
 import com.ebay.sdk.helper.ConsoleUtil;
 import com.ebay.sdk.call.GeteBayOfficialTimeCall;
+
 import com.ebay.soap.eBLBaseComponents.DetailLevelCodeType;
 
 /**
@@ -54,6 +55,7 @@ public class Server {
             testDao = new MySqlTestDao();
 
             logFile = new FileHandler("Server.log", true);
+
             logFile.setFormatter(new SimpleFormatter());
             LOGGER.addHandler(logFile);
 
@@ -69,6 +71,14 @@ public class Server {
             {
                 Socket socket = ss.accept();    // listen (and wait) for a connection, accept the connection, 
                 // and open a new socket to communicate with the client
+                Scanner in = new Scanner(socket.getInputStream());
+                String un = in.nextLine();
+                String pw = in.nextLine();
+                
+                System.out.println("Server message: Received from client : \"" + un + "\"" + pw + "\"");
+                           
+                OutputStream os = socket.getOutputStream();
+                PrintWriter out = new PrintWriter(os, true);
                 clientNumber++;
 
                 LOGGER.log(Level.INFO, "A Client has connected from the address: {0}", socket.getInetAddress());

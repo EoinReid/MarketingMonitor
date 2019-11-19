@@ -28,6 +28,11 @@ public class Ad {
 
     public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time){
 
+    
+    //Need to add photo variable (Blob or as possible byte)
+
+    public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time){
+
         this.type = type;
         this.title = title;
         this.price = price;
@@ -38,9 +43,10 @@ public class Ad {
         this.subSection = subSection;
         this.time = time;
     }
-
+    
     public Ad() 
     {
+        
 
     }
 
@@ -178,8 +184,5 @@ public class Ad {
         return "Ad{" + "type=" + type + ", title=" + title + ", price=" + price + ", section=" + section + ", description=" + description + ", id=" + id + ", currency=" + currency + ", subSection=" + subSection + ", time=" + time + '}';
     }
 
-
-
-
-
 }
+

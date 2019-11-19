@@ -5,6 +5,8 @@
  */
 package DAOs;
 
+import DTOs.User;
+import DTOs.Ad;
 import Exceptions.DaoException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,12 +18,11 @@ import java.util.List;
 import DTOs.Ad;
 import DTOs.User;
 
-//test
 /**
  *
  * @author tiarn
  */
-public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
+public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
     @Override
     
@@ -72,7 +73,6 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         
     }
     
-    @Override
     public User Login(int mId) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
@@ -113,6 +113,7 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
     
     //This method returns the title and price an ad that meets a certain keyword search
+
     @Override 
     public Ad findAd(String akeyword) throws DaoException {
         Connection con = null;
@@ -157,7 +158,7 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         return a;     
     }
     
-    //This Methord returns the list of prices of items that meet the keyword search
+
     @Override
     public List<Double> PriceCompare(String akeyword) throws DaoException {
         Connection con = null;
