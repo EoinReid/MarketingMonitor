@@ -10,20 +10,20 @@ package DTOs;
  * @author tiarn
  */
 public class User {
-    
+
     private String username;
     private String password;
-    
+
     public User(String username, String password) 
     {
-        
+
         this.username = username;
         this.password = password;
     }
-    
+
     public User() 
     {
-        
+
     }
 
     public String getUsername() {
@@ -46,7 +46,5 @@ public class User {
     public String toString() {
         return "User{" + "username=" + username + ", password=" + password + '}';
     }
-    
-    
-    
 }
+

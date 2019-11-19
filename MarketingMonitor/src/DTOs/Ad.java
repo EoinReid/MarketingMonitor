@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author tiarn
  */
 public class Ad {
-    
+
     private Enum type;
     private String title;
     private double price;
@@ -23,11 +23,16 @@ public class Ad {
     private Enum currency;
     private String subSection;
     private Timestamp time;
+
+    //Need to add photo variable (Blob or as possible byte)
+
+    public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time){
+
     
     //Need to add photo variable (Blob or as possible byte)
 
     public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time){
-        
+
         this.type = type;
         this.title = title;
         this.price = price;
@@ -42,6 +47,7 @@ public class Ad {
     public Ad() 
     {
         
+
     }
 
     public Enum getType() {
@@ -177,9 +183,6 @@ public class Ad {
     public String toString() {
         return "Ad{" + "type=" + type + ", title=" + title + ", price=" + price + ", section=" + section + ", description=" + description + ", id=" + id + ", currency=" + currency + ", subSection=" + subSection + ", time=" + time + '}';
     }
-    
-    
-    
-    
-    
+
 }
+
