@@ -245,7 +245,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             }
         }
         
-        return a;
+        return (List<Ad>) a;
     }
     
 

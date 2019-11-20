@@ -28,7 +28,6 @@ import com.ebay.sdk.ApiCredential;
 import com.ebay.sdk.call.GetItemCall;
 import com.ebay.sdk.helper.ConsoleUtil;
 import com.ebay.sdk.call.GeteBayOfficialTimeCall;
-
 import com.ebay.soap.eBLBaseComponents.DetailLevelCodeType;
 import java.util.Scanner;
 import DTOs.Ad;
