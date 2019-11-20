@@ -7,6 +7,7 @@ package marketingmonitor;
 
 import DAOs.TestDaoI;
 import DAOs.MySqlTestDao;
+import DTOs.Ad;
 import Exceptions.DaoException;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -191,7 +192,7 @@ public class Server {
 
             // [Setp 3] Handle the result returned
             // This will send the returned info to the client
-            System.out.println("Official eBay Time : " + cal.getTime().toString());
+            //System.out.println("Official eBay Time : " + cal.getTime().toString());
         } catch (Exception e) {
             System.out.println("Failed to get add");
             e.printStackTrace();
@@ -243,4 +244,51 @@ public class Server {
         
         return ItemID;
     }
+    public String convertToJsonGroup(List<Ad> a) throws DaoException {
+            String jsonstr = "{\"ads\":[";
+            int moviecount = 0;
+
+            for (Ad ad : a) {
+                if (moviecount > 0 && moviecount < a.size()) {
+                    jsonstr += ",";
+                }
+                moviecount++;
+
+                jsonstr += "{\"Id\":\"" + ad.getType() + "\","
+                        + "\"Title\":\"" + ad.getTitle() + "\","
+                        + "\"Genre\":\"" + ad.getPrice() + "\","
+                        + "\"Director\":\"" + ad.getSection() + "\","
+                        + "\"RunTime\":\"" + ad.getDescription() + "\","
+                        + "\"Plot\":\"" + ad.getId() + "\","
+                        + "\"Location\":\"" + ad.getCurrency() + "\","
+                        + "\"Poster\":\"" + ad.getSubSection() + "\","
+                        + "\"Rating\":\"" + ad.getTime() + "\"}";
+
+            }
+            jsonstr += "] }";
+            return jsonstr;
+
+        }
+    
+    public String convertToJson(Ad a) throws DaoException {
+            Ad ad = a;
+
+            String jsonStr = "{\"ads\":";
+
+            jsonStr += "{\"Id\":\"" + ad.getType() + "\","
+                    + "\"Title\":\"" + ad.getTitle() + "\","
+                    + "\"Genre\":\"" + ad.getPrice() + "\","
+                    + "\"Director\":\"" + ad.getSection() + "\","
+                    + "\"RunTime\":\"" + ad.getDescription() + "\","
+                    + "\"Plot\":\"" + ad.getId() + "\","
+                    + "\"Location\":\"" + ad.getCurrency() + "\","
+                    + "\"Poster\":\"" + ad.getSubSection() + "\","
+                    + "\"Rating\":\"" + ad.getTime() + "\"}";
+
+            jsonStr += " }";
+
+            System.out.println(jsonStr);
+
+            return jsonStr;
+        }
 }
