@@ -152,8 +152,33 @@ public class Server {
                         Ad adReturn = dao.findAd(input);
                         String json = convertToJsonList(adReturn);
                         socketWriter.println(json);
-                    }else if(message.startsWith("priceCompare")){
-                        String input = message.substring(9);
+                    } else if (message.startsWith("priceCompare")) {
+                        //This returns some info about the prices of certain objects
+                        String input = message.substring(13);
+                        List<Double> prices = dao.PriceCompare(input);
+                        double max = prices.get(0);
+                        int noOfReturns = prices.size();
+                        Double totalPrice = 0.0;
+                        Double median;
+                        //If there is an even number of return this returns the median
+                        if ((noOfReturns % 2) == 0) {
+                            int medianPos = noOfReturns / 2;
+                            median = prices.get(medianPos);
+                        } else {
+                            //Retursn the median for an odd number of turns
+                            int medianPos = noOfReturns / 2;
+                            medianPos += 0.5;
+                            median = prices.get(medianPos);
+                        }
+                        for (int i = 0; i <= prices.size(); i++) {
+                            totalPrice = totalPrice + prices.get(i);
+                        }
+                        Double mean = totalPrice/noOfReturns;
+                        //TODO Add Json convertion here
+                        
+                        socketWriter.println(json);
+                    }else if(message.startsWith("viewCount")){
+                        
                     }
                 }
                 socket.close();

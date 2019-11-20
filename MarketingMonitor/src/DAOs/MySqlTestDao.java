@@ -171,7 +171,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price FROM adds WHERE Title like %?%";
+            String query = "SELECT title, price FROM adds WHERE Title like %?% ORDER BY Price DECENDING";
             ps = con.prepareStatement(query);
             ps.setString(1, akeyword);
 
@@ -203,7 +203,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         return prices;     
     }
     @Override
-    public Ad popularAd(String akeyword) throws DaoException {
+    public Ad popularAd() throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -213,7 +213,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price, view_Count FROM adds WHERE Description like %?% GROUP BY view_Count";
+            String query = "SELECT title, price, view_Count FROM adds GROUP BY view_Count";
             ps = con.prepareStatement(query);
             ps.setString(1, akeyword);
 
