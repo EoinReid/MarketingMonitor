@@ -203,7 +203,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         return prices;     
     }
     @Override
-    public Ad popularAd() throws DaoException {
+    public List<Ad> popularAd() throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -215,7 +215,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
 
             String query = "SELECT title, price, view_Count FROM adds GROUP BY view_Count";
             ps = con.prepareStatement(query);
-            ps.setString(1, akeyword);
+            
 
             //Using a PreparedStatement to execute SQL...
             rs = ps.executeQuery();

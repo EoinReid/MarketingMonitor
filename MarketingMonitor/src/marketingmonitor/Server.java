@@ -177,8 +177,10 @@ public class Server {
                         //TODO Add Json convertion here
                         
                         socketWriter.println(json);
-                    }else if(message.startsWith("viewCount")){
-                        
+                    }else if(message.startsWith("viewCount")){ 
+                        List<Ad> ads = dao.popularAd();
+                        String json = convertToJsonList(ads);
+                        socketWriter.println(json);  // send message to client
                     }
                 }
                 socket.close();
