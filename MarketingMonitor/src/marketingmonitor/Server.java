@@ -7,6 +7,7 @@ package marketingmonitor;
 
 import DAOs.TestDaoI;
 import DAOs.MySqlTestDao;
+import DTOs.Ad;
 import Exceptions.DaoException;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -80,7 +81,6 @@ public class Server {
                 Scanner in = new Scanner(socket.getInputStream());
                 String un = in.nextLine();
                 String pw = in.nextLine();
-
                 System.out.println("Server message: Received from client : \"" + un + "\"" + pw + "\"");
 
                 OutputStream os = socket.getOutputStream();
@@ -146,7 +146,6 @@ public class Server {
                     if (message.startsWith("testCon")) {
                         //This is a test function
                         socketWriter.println("Connected!");  // send message to client
-
                     }else if(message.startsWith("Login")){
                         String returnPoint;
                         String input = message.substring(6);
@@ -190,8 +189,7 @@ public class Server {
                             totalPrice = totalPrice + prices.get(i);
                         }
                         Double mean = totalPrice/noOfReturns;
-                        //TODO Add Json convertion here
-                        
+                        //TODO Add Json convertion here                        
                         socketWriter.println(json);
                     }else if(message.startsWith("viewCount")){ 
                         List<Ad> ads = dao.popularAd();
@@ -298,4 +296,51 @@ public class Server {
 
         return ItemID;
     }
+    public String convertToJsonGroup(List<Ad> a) throws DaoException {
+            String jsonstr = "{\"ads\":[";
+            int moviecount = 0;
+
+            for (Ad ad : a) {
+                if (moviecount > 0 && moviecount < a.size()) {
+                    jsonstr += ",";
+                }
+                moviecount++;
+
+                jsonstr += "{\"Id\":\"" + ad.getType() + "\","
+                        + "\"Title\":\"" + ad.getTitle() + "\","
+                        + "\"Genre\":\"" + ad.getPrice() + "\","
+                        + "\"Director\":\"" + ad.getSection() + "\","
+                        + "\"RunTime\":\"" + ad.getDescription() + "\","
+                        + "\"Plot\":\"" + ad.getId() + "\","
+                        + "\"Location\":\"" + ad.getCurrency() + "\","
+                        + "\"Poster\":\"" + ad.getSubSection() + "\","
+                        + "\"Rating\":\"" + ad.getTime() + "\"}";
+
+            }
+            jsonstr += "] }";
+            return jsonstr;
+
+        }
+    
+    public String convertToJson(Ad a) throws DaoException {
+            Ad ad = a;
+
+            String jsonStr = "{\"ads\":";
+
+            jsonStr += "{\"Id\":\"" + ad.getType() + "\","
+                    + "\"Title\":\"" + ad.getTitle() + "\","
+                    + "\"Genre\":\"" + ad.getPrice() + "\","
+                    + "\"Director\":\"" + ad.getSection() + "\","
+                    + "\"RunTime\":\"" + ad.getDescription() + "\","
+                    + "\"Plot\":\"" + ad.getId() + "\","
+                    + "\"Location\":\"" + ad.getCurrency() + "\","
+                    + "\"Poster\":\"" + ad.getSubSection() + "\","
+                    + "\"Rating\":\"" + ad.getTime() + "\"}";
+
+            jsonStr += " }";
+
+            System.out.println(jsonStr);
+
+            return jsonStr;
+        }
 }

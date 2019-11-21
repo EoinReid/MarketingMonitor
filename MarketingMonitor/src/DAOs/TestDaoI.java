@@ -24,4 +24,5 @@ public interface TestDaoI {
     public Ad findAd(String akeyword) throws DaoException;
     public List<Double> PriceCompare(String akeyword) throws DaoException;
     public List<Ad> popularAd() throws DaoException;
+
 }
