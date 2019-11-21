@@ -29,9 +29,14 @@ import com.ebay.sdk.ApiCredential;
 import com.ebay.sdk.call.GetItemCall;
 import com.ebay.sdk.helper.ConsoleUtil;
 import com.ebay.sdk.call.GeteBayOfficialTimeCall;
+import com.ebay.sdk.call.GetItemCall;
+        
+   
 
 import com.ebay.soap.eBLBaseComponents.DetailLevelCodeType;
 import java.util.Scanner;
+import DTOs.Ad;
+import DTOs.User;
 
 /**
  *
@@ -54,7 +59,6 @@ public class Server {
     public void start() {
         try {
 
-            testDao = new MySqlTestDao() {};
 
             logFile = new FileHandler("Server.log", true);
 
@@ -73,12 +77,12 @@ public class Server {
             {
                 Socket socket = ss.accept();    // listen (and wait) for a connection, accept the connection, 
                 // and open a new socket to communicate with the client
+                //Client logs in here
                 Scanner in = new Scanner(socket.getInputStream());
                 String un = in.nextLine();
                 String pw = in.nextLine();
-               
                 System.out.println("Server message: Received from client : \"" + un + "\"" + pw + "\"");
-                           
+
                 OutputStream os = socket.getOutputStream();
                 PrintWriter out = new PrintWriter(os, true);
                 clientNumber++;
@@ -140,15 +144,29 @@ public class Server {
                     LOGGER.log(Level.INFO, "Command Received from the client: {0}", message);
                     System.out.println("Server: (ClientHandler): Read command from client " + clientNumber + ": " + message);
                     if (message.startsWith("testCon")) {
-
+                        //This is a test function
                         socketWriter.println("Connected!");  // send message to client
-                    } else if (message.startsWith("AdSearch")) {
-                        //This function calls the DAO and returns an add that matches a certain SKU            
-                      String input = message.substring(9);
-                        System.out.println(input);
-                     //   Ad adReturn = dao.findAd(input);
-                  //      String json = convertToJsonList(adReturn);
-                   //     socketWriter.println(json);
+                    }else if(message.startsWith("Login")){
+                        String returnPoint;
+                        String input = message.substring(6);
+                        String[] buildUser = input.split(",");
+                        //Send the username to the database
+                        User userLogin = dao.Login(buildUser[0]);
+                        String AccUser = userLogin.getUsername();
+                        String AccPassword = userLogin.getPassword();
+                        //Tests if the username and Pasword match
+                        if(AccUser == buildUser[0] && AccPassword == buildUser[1]){
+                            returnPoint = "1";
+                        }else{
+                            returnPoint = "0";
+                        }
+                        socketWriter.println(returnPoint);
+                    }else if (message.startsWith("AdSearch")) {
+                        //This function calls the DAO and returns an add that matches a certain SKU
+                        String input = message.substring(9);
+                        Ad adReturn = dao.findAd(input);
+                        String json = convertToJsonList(adReturn);
+                        socketWriter.println(json);
                     } else if (message.startsWith("priceCompare")) {
                         //This returns some info about the prices of certain objects
                         String input = message.substring(13);
@@ -171,13 +189,12 @@ public class Server {
                             totalPrice = totalPrice + prices.get(i);
                         }
                         Double mean = totalPrice/noOfReturns;
-                        //TODO Add Json convertion here
-                        
-                       // socketWriter.println(json);
+                        //TODO Add Json convertion here                        
+                        socketWriter.println(json);
                     }else if(message.startsWith("viewCount")){ 
-                       // List<Ad> ads = dao.popularAd();
-                       // String json = convertToJsonList(ads);
-                      //  socketWriter.println(json);  // send message to client
+                        List<Ad> ads = dao.popularAd();
+                        String json = convertToJsonList(ads);
+                        socketWriter.println(json);  // send message to client
                     }
                 }
                 socket.close();
@@ -216,26 +233,25 @@ public class Server {
     }
 
     //Returns a single add on ebay
-    public void getEbayAd() {
-        try {
-            //test call to see if ebay connection can be established
-
-            // [Step 1] Initialize eBay ApiContext object
-            System.out.println("===== [1] Account Information ====");
-            ApiContext apiContext = getApiContext();
-
-            // [Step 2] Create call object and execute the call
-          
-
-            // [Setp 3] Handle the result returned
-            // This will send the returned info to the client
-            //System.out.println("Official eBay Time : " + cal.getTime().toString());
-        } catch (Exception e) {
-            System.out.println("Failed to get add");
-            e.printStackTrace();
-        }
-    }
-
+//    public void getEbayAd() {
+//        try {
+//            //test call to see if ebay connection can be established
+//
+//            // [Step 1] Initialize eBay ApiContext object
+//            System.out.println("===== [1] Account Information ====");
+//            ApiContext apiContext = getApiContext();
+//
+//            // [Step 2] Create call object and execute the call
+//          
+//
+//            // [Setp 3] Handle the result returned
+//            // This will send the returned info to the client
+//            System.out.println("Official eBay Time : " + cal.getTime().toString());
+//        } catch (Exception e) {
+//            System.out.println("Failed to get add");
+//            e.printStackTrace();
+//        }
+//    }
     // Function for creating your ebay authentication code
     private static ApiContext getApiContext() throws IOException {
 
@@ -255,13 +271,13 @@ public class Server {
 
         return apiContext;
     }
-    
-    public String findEbayAd(String Keyword){
+
+    public String findEbayAd(String Keyword) {
         String ItemID = null;
-        
+
         try {
             //Finds the item ID of an add on ebay
-            
+
             // [Step 1] Initialize eBay ApiContext object
             System.out.println("===== [1] Account Information ====");
             ApiContext apiContext = getApiContext();
@@ -273,12 +289,11 @@ public class Server {
             System.out.println("End to call eBay API, show call result ...");
 
             // [Setp 3] Handle the result returned
-            
         } catch (Exception e) {
             System.out.println("Fail to get eBay official time.");
             e.printStackTrace();
         }
-        
+
         return ItemID;
     }
     public String convertToJsonGroup(List<Ad> a) throws DaoException {

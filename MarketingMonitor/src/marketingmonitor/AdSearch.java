@@ -184,7 +184,24 @@ public class AdSearch extends javax.swing.JFrame {
         
      
     }
-
+    
+    private void jbtnAdSearch(java.awt.event.ActionEvent evt) {                                          
+      String sku = SKU.getText();
+     
+        try {
+            Socket socket = new Socket("localhost", 8080);  // connect to server socket
+             OutputStream os = socket.getOutputStream();
+            
+            PrintWriter out = new PrintWriter(os, true);
+            out.write("AdSearch" + sku+"\n");  // write command to socket, and newline terminator
+            out.flush();              // flush (force) the command over the socket
+        } catch (IOException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+     
+    }
+    private javax.swing.JTextField SKU;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JrefCode;
     private javax.swing.JButton jButton1;

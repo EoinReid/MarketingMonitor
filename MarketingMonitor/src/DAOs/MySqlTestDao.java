@@ -18,63 +18,16 @@ import java.util.List;
 import DTOs.Ad;
 import DTOs.User;
 
+
 /**
  *
  * @author tiarn
  */
 public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
+     
     @Override
-    
-    public String testCon() throws DaoException
-    {
-        Connection con = null;
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-        
-        try
-        {
-            con = this.getConnection();
-            
-            if (con != null) 
-                {
-                    System.out.println("Connected to Server!");
-                }
-            
-            
-        }
-        catch (SQLException e) 
-        {
-            throw new DaoException("testCon() " + e.getMessage());
-        }
-        finally 
-        {
-            try 
-            {
-                if (rs != null) 
-                {
-                    rs.close();
-                }
-                if (ps != null) 
-                {
-                    ps.close();
-                }
-                if (con != null) 
-                {
-                    freeConnection(con);
-                }
-            } 
-            catch (SQLException e) 
-            {
-                throw new DaoException("testCon() " + e.getMessage());
-            }
-        }
-        return null;
-        
-    }
-    
-    @Override
-    public User Login(int mId) throws DaoException {
+    public User Login(String mUsername) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -84,7 +37,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
 
             String query = "SELECT username, password FROM users WHERE username = ?";
             ps = con.prepareStatement(query);
-            ps.setInt(1, mId);
+            ps.setString(1, mUsername);
 
             rs = ps.executeQuery();
             if (rs.next()) {
@@ -171,7 +124,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price FROM adds WHERE Title like %?%";
+            String query = "SELECT title, price FROM adds WHERE Title like %?% ORDER BY Price DECENDING";
             ps = con.prepareStatement(query);
             ps.setString(1, akeyword);
 
@@ -203,19 +156,20 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         return prices;     
     }
     @Override
-    public Ad popularAd(String akeyword) throws DaoException {
+    public List<String> popularAd() throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
-        Ad a = null;
+        String component;
+        List<String> component = new ArrayList<>();
         
         try {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price, view_Count FROM adds WHERE Description like %?% GROUP BY view_Count";
+            String query = "SELECT title, price, view_Count FROM adds GROUP BY view_Count";
             ps = con.prepareStatement(query);
-            ps.setString(1, akeyword);
+            
 
             //Using a PreparedStatement to execute SQL...
             rs = ps.executeQuery();

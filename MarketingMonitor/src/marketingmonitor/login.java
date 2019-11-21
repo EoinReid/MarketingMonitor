@@ -9,7 +9,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import java.io.StringReader;
+import java.io.InputStream;
+import java.util.Scanner;
 /**
  *
  * @author eoire
@@ -162,8 +164,7 @@ public class login extends javax.swing.JFrame {
              OutputStream os = socket.getOutputStream();
             
             PrintWriter out = new PrintWriter(os, true);
-            out.write(un+"\n");  // write command to socket, and newline terminator
-            out.write(pw+"\n");  // write command to socket, and newline terminator
+            out.write("Login " +un+"," +pw);  // write command to socket, and newline terminator
             out.flush();              // flush (force) the command over the socket
         } catch (IOException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
@@ -173,8 +174,19 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnLoginActionPerformed
 
     private void jbtnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbtnLoginMouseClicked
+      try{
+      Socket socket = new Socket("localhost", 8080);  // connect to server socket
+      OutputStream os = socket.getOutputStream();    
       AdSearch as = new AdSearch();
-      as.AdSearchScreen();
+      InputStream inputStream = socket.getInputStream();
+      Scanner socketReader = new Scanner(socket.getInputStream());
+      String response = socketReader.nextLine();
+      if(response.equals("1")){
+         as.AdSearchScreen(); 
+      }
+    }catch(IOException ex) {
+            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jbtnLoginMouseClicked
 
     /**
