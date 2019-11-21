@@ -88,7 +88,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             while (rs.next()) {
                 String title = rs.getString("Title");
                 Double price = rs.getDouble("Price");
-                a = new Ad();
+                a = new Ad(title,price);
 
             }
         } catch (SQLException e) {
@@ -156,12 +156,12 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         return prices;     
     }
     @Override
-    public List<String> popularAd() throws DaoException {
+    public List<Ad> popularAd() throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         String component;
-        List<String> component = new ArrayList<>();
+        List<Ad> ads = new ArrayList<>();
         
         try {
             //Get connection object using the methods in the super class (MySqlDao.java)...
@@ -177,8 +177,10 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             while (rs.next()) {
                 String title = rs.getString("Title");
                 Double price = rs.getDouble("Price");
-                int view_Count = rs.getInt("View Count");
-                a = new Ad();
+                int viewCount = rs.getInt("View Count");
+                int count = 0;
+                count++;
+                ads.add(new Ad(title,price,viewCount)) ;
 
             }
         } catch (SQLException e) {
@@ -199,7 +201,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             }
         }
         
-        return a;
+        return ads;
     }
     
 

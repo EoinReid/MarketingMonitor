@@ -23,6 +23,7 @@ public class Ad {
     private Enum currency;
     private String subSection;
     private Timestamp time;
+    private int viewCount;
 
     //Need to add photo variable (Blob or as possible byte)
 
@@ -46,6 +47,19 @@ public class Ad {
         
 
     }
+
+    public Ad(String title, double price) {
+        this.title = title;
+        this.price = price;
+    }
+
+    public Ad(String title, double price, int viewCount) {
+        this.title = title;
+        this.price = price;
+        this.viewCount = viewCount;
+    }
+    
+    
 
     public Enum getType() {
         return type;
@@ -118,6 +132,16 @@ public class Ad {
     public void setTime(Timestamp time) {
         this.time = time;
     }
+
+    public int getViewCount() {
+        return viewCount;
+    }
+
+    public void setViewCount(int viewCount) {
+        this.viewCount = viewCount;
+    }
+    
+    
 
     @Override
     public int hashCode() {

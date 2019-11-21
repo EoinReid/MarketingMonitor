@@ -165,7 +165,7 @@ public class Server {
                         //This function calls the DAO and returns an add that matches a certain SKU
                         String input = message.substring(9);
                         Ad adReturn = dao.findAd(input);
-                        String json = convertToJsonList(adReturn);
+                        String json = convertToJson(adReturn);
                         socketWriter.println(json);
                     } else if (message.startsWith("priceCompare")) {
                         //This returns some info about the prices of certain objects
@@ -296,7 +296,7 @@ public class Server {
 
         return ItemID;
     }
-    public String convertToJsonGroup(List<Ad> a) throws DaoException {
+    public String convertToJsonList(List<Ad> a) throws DaoException {
             String jsonstr = "{\"ads\":[";
             int moviecount = 0;
 
