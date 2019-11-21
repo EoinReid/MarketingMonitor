@@ -28,6 +28,9 @@ import com.ebay.sdk.ApiCredential;
 import com.ebay.sdk.call.GetItemCall;
 import com.ebay.sdk.helper.ConsoleUtil;
 import com.ebay.sdk.call.GeteBayOfficialTimeCall;
+import com.ebay.sdk.call.GetItemCall;
+        
+   
 
 import com.ebay.soap.eBLBaseComponents.DetailLevelCodeType;
 import java.util.Scanner;
@@ -55,8 +58,6 @@ public class Server {
     public void start() {
         try {
 
-            testDao = new MySqlTestDao() {
-            };
 
             logFile = new FileHandler("Server.log", true);
 
@@ -146,7 +147,22 @@ public class Server {
                         //This is a test function
                         socketWriter.println("Connected!");  // send message to client
 
-                    } else if (message.startsWith("AdSearch")) {
+                    }else if(message.startsWith("Login")){
+                        String returnPoint;
+                        String input = message.substring(6);
+                        String[] buildUser = input.split(",");
+                        //Send the username to the database
+                        User userLogin = dao.Login(buildUser[0]);
+                        String AccUser = userLogin.getUsername();
+                        String AccPassword = userLogin.getPassword();
+                        //Tests if the username and Pasword match
+                        if(AccUser == buildUser[0] && AccPassword == buildUser[1]){
+                            returnPoint = "1";
+                        }else{
+                            returnPoint = "0";
+                        }
+                        socketWriter.println(returnPoint);
+                    }else if (message.startsWith("AdSearch")) {
                         //This function calls the DAO and returns an add that matches a certain SKU
                         String input = message.substring(9);
                         Ad adReturn = dao.findAd(input);
