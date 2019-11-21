@@ -40,7 +40,7 @@ import DTOs.User;
 
 /**
  *
- * @author tiarn
+ * @author vaugh
  */
 public class Server {
 
@@ -172,6 +172,7 @@ public class Server {
                         String input = message.substring(13);
                         List<Double> prices = dao.PriceCompare(input);
                         double max = prices.get(0);
+                        double min = prices.get((prices.size()-1));
                         int noOfReturns = prices.size();
                         Double totalPrice = 0.0;
                         Double median;
@@ -190,7 +191,7 @@ public class Server {
                         }
                         Double mean = totalPrice/noOfReturns;
                         //TODO Add Json convertion here                        
-                        socketWriter.println(json);
+                      //  socketWriter.println(json);
                     }else if(message.startsWith("viewCount")){ 
                         List<Ad> ads = dao.popularAd();
                         String json = convertToJsonList(ads);
