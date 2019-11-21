@@ -76,7 +76,7 @@ public class Server {
                 Scanner in = new Scanner(socket.getInputStream());
                 String un = in.nextLine();
                 String pw = in.nextLine();
-                
+               
                 System.out.println("Server message: Received from client : \"" + un + "\"" + pw + "\"");
                            
                 OutputStream os = socket.getOutputStream();
@@ -142,7 +142,42 @@ public class Server {
                     if (message.startsWith("testCon")) {
 
                         socketWriter.println("Connected!");  // send message to client
-
+                    } else if (message.startsWith("AdSearch")) {
+                        //This function calls the DAO and returns an add that matches a certain SKU            
+                      String input = message.substring(9);
+                        System.out.println(input);
+                     //   Ad adReturn = dao.findAd(input);
+                  //      String json = convertToJsonList(adReturn);
+                   //     socketWriter.println(json);
+                    } else if (message.startsWith("priceCompare")) {
+                        //This returns some info about the prices of certain objects
+                        String input = message.substring(13);
+                        List<Double> prices = dao.PriceCompare(input);
+                        double max = prices.get(0);
+                        int noOfReturns = prices.size();
+                        Double totalPrice = 0.0;
+                        Double median;
+                        //If there is an even number of return this returns the median
+                        if ((noOfReturns % 2) == 0) {
+                            int medianPos = noOfReturns / 2;
+                            median = prices.get(medianPos);
+                        } else {
+                            //Retursn the median for an odd number of turns
+                            int medianPos = noOfReturns / 2;
+                            medianPos += 0.5;
+                            median = prices.get(medianPos);
+                        }
+                        for (int i = 0; i <= prices.size(); i++) {
+                            totalPrice = totalPrice + prices.get(i);
+                        }
+                        Double mean = totalPrice/noOfReturns;
+                        //TODO Add Json convertion here
+                        
+                       // socketWriter.println(json);
+                    }else if(message.startsWith("viewCount")){ 
+                       // List<Ad> ads = dao.popularAd();
+                       // String json = convertToJsonList(ads);
+                      //  socketWriter.println(json);  // send message to client
                     }
                 }
                 socket.close();
@@ -150,6 +185,8 @@ public class Server {
 
                 LOGGER.warning("Exception caught");
                 e.printStackTrace();
+            } catch (DaoException ex) {
+                Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             }
             System.out.println("Server: (ClientHandler): Handler for Client " + clientNumber + " is terminating .....");
         }

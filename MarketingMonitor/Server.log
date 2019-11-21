@@ -16,3 +16,17 @@ Nov 15, 2019 3:20:43 PM marketingmonitor.Server start
 INFO: A Client has connected from the address: /127.0.0.1
 Nov 15, 2019 3:25:07 PM marketingmonitor.Server$ClientHandler run
 WARNING: Exception caught
+Nov 20, 2019 11:49:30 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 20, 2019 11:49:35 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 20, 2019 11:51:40 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 20, 2019 11:51:50 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 20, 2019 11:51:55 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 20, 2019 12:17:42 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 3:20:50 PM marketingmonitor.Server start
+INFO: Server Starting....

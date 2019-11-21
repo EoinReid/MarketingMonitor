@@ -23,5 +23,5 @@ public interface TestDaoI {
     public User Login(int mId) throws DaoException;
     public Ad findAd(String akeyword) throws DaoException;
     public List<Double> PriceCompare(String akeyword) throws DaoException;
-    public Ad popularAd(String akeyword) throws DaoException;
+    public  Ad popularAd(String akeyword) throws DaoException;
 }
