@@ -190,7 +190,7 @@ public class Server {
                         }
                         Double mean = totalPrice/noOfReturns;
                         //TODO Add Json convertion here                        
-                        socketWriter.println(json);
+                        //socketWriter.println(json);
                     }else if(message.startsWith("viewCount")){ 
                         List<Ad> ads = dao.popularAd();
                         String json = convertToJsonList(ads);

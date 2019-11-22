@@ -124,7 +124,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price FROM adds WHERE Title like %?% ORDER BY Price DECENDING";
+            String query = "SELECT title, price FROM adds WHERE Title like %?% ORDER BY Price DESC";
             ps = con.prepareStatement(query);
             ps.setString(1, akeyword);
 
@@ -167,7 +167,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price, view_Count FROM adds GROUP BY view_Count";
+            String query = "SELECT title, price, view_Count FROM adds ORDER BY view_Count DESC";
             ps = con.prepareStatement(query);
             
 
