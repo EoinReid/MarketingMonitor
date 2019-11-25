@@ -177,12 +177,22 @@ public class login extends javax.swing.JFrame {
       try{
       Socket socket = new Socket("localhost", 8080);  // connect to server socket
       OutputStream os = socket.getOutputStream();    
-      AdSearch as = new AdSearch();
+    PrintWriter out = new PrintWriter(os, true);
+    
+      String pw = jPassword.getText();
+      String un = jUsername.getText();
+      String command = "Login";
+            out.write(command + un +","+ pw+"\n");  // write command to socket, and newline terminator
+            out.flush();              // flush (force) the command over the socket
+            
       InputStream inputStream = socket.getInputStream();
       Scanner socketReader = new Scanner(socket.getInputStream());
       String response = socketReader.nextLine();
+      
       if(response.equals("1")){
-         as.AdSearchScreen(); 
+        HomeMenu hm = new HomeMenu();
+         hm.HomeMenuScreen(); 
+         dispose();
       }
     }catch(IOException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
@@ -222,6 +232,11 @@ public class login extends javax.swing.JFrame {
                 new login().setVisible(true);
             }
         });
+    }
+    
+    public static void closeWindow() {
+    
+    
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
