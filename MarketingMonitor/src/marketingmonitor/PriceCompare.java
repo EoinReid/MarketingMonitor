@@ -4,6 +4,19 @@
 package marketingmonitor;
 
 import DTOs.Ad;
+import DTOs.Statistics;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.io.StringReader;
+import java.net.Socket;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
 
 /**
  *
@@ -29,10 +42,20 @@ public class PriceCompare extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jBackToHome = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        JrefCode = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jSubSectionType = new javax.swing.JTextField();
+        jSearchButton = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jMax = new javax.swing.JLabel();
+        jMedian = new javax.swing.JLabel();
+        jMeanResult = new javax.swing.JLabel();
+        jMedianResult = new javax.swing.JLabel();
+        jMin = new javax.swing.JLabel();
+        jMean = new javax.swing.JLabel();
+        jMaxResult = new javax.swing.JLabel();
+        jMinResult = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1200, 600));
@@ -43,19 +66,33 @@ public class PriceCompare extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 72)); // NOI18N
         jLabel4.setText("M");
 
+        jBackToHome.setText("Back To Menu");
+        jBackToHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBackToHomeMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(489, 489, 489)
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(489, 489, 489)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jBackToHome)))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addContainerGap()
+                .addComponent(jBackToHome)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -73,27 +110,89 @@ public class PriceCompare extends javax.swing.JFrame {
             }
         });
 
-        JrefCode.setText("40\" TV");
-        JrefCode.addActionListener(new java.awt.event.ActionListener() {
+        jSubSectionType.setText("TV");
+        jSubSectionType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JrefCodeActionPerformed(evt);
+                jSubSectionTypeActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Search");
+        jSearchButton.setText("Search");
+        jSearchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jSearchButtonMouseClicked(evt);
+            }
+        });
+
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setPreferredSize(new java.awt.Dimension(150, 150));
+
+        jMax.setText("Max");
+
+        jMedian.setText("Median");
+
+        jMin.setText("Min");
+
+        jMean.setText("Mean");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jMedian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jMax, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jMin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jMean, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jMeanResult)
+                    .addComponent(jMedianResult)
+                    .addComponent(jMaxResult)
+                    .addComponent(jMinResult))
+                .addContainerGap(474, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jMean)
+                    .addComponent(jMeanResult))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jMedian)
+                    .addComponent(jMedianResult))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jMax)
+                    .addComponent(jMaxResult))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jMin)
+                    .addComponent(jMinResult))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(116, 116, 116)
-                .addComponent(JrefCode, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(116, 116, 116)
+                        .addComponent(jSubSectionType, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jSearchButton))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 633, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,9 +200,11 @@ public class PriceCompare extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JrefCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap(502, Short.MAX_VALUE))
+                    .addComponent(jSubSectionType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSearchButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(282, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -113,8 +214,8 @@ public class PriceCompare extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -129,14 +230,114 @@ public class PriceCompare extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        String refCode = JrefCode.getText();
+        String refCode = jSubSectionType.getText();
         Ad a = new Ad();
 
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void JrefCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JrefCodeActionPerformed
+        public static void PriceCompareScreen() {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new PriceCompare().setVisible(true);
+            }
+        });
+    }  
+        
+    
+    private void jSubSectionTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSubSectionTypeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JrefCodeActionPerformed
+    }//GEN-LAST:event_jSubSectionTypeActionPerformed
+
+    private void jBackToHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBackToHomeMouseClicked
+        HomeMenu hm = new HomeMenu();
+        hm.HomeMenuScreen();
+        dispose();
+    }//GEN-LAST:event_jBackToHomeMouseClicked
+
+    private void jSearchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSearchButtonMouseClicked
+           String refCode = jSubSectionType.getText();
+        System.out.println(refCode);
+       try {
+            Socket socket = new Socket("localhost", 8080);  // connect to server socket
+             OutputStream os = socket.getOutputStream();
+            
+            PrintWriter out = new PrintWriter(os, true);
+            String command = "priceCompare";
+            out.write(command +refCode+"\n");  // write command to socket, and newline terminator
+            out.flush();              // flush (force) the command over the socket     
+            
+      InputStream inputStream = socket.getInputStream();
+      Scanner socketReader = new Scanner(socket.getInputStream());
+      String response = socketReader.nextLine();
+      JsonReader jr = Json.createReader(new StringReader(response));
+      JsonObject jo = jr.readObject();
+            
+      JsonObject object = jo.getJsonObject("Statistics");
+      String maxResult = object.getString("maxCost");   
+      Double max = Double.parseDouble(maxResult);  
+      String minResult = object.getString("minCost");   
+      Double min = Double.parseDouble(minResult);        
+      
+      String meanResult = object.getString("getMean");   
+      Double mean = Double.parseDouble(meanResult);  
+      String medianResult = object.getString("getMedian");   
+      Double median = Double.parseDouble(medianResult);  
+      
+      
+      Statistics s = new Statistics(max,min,mean,median);
+   
+      Double maxOut = s.getMaxCost();      
+      String maxToString = String.valueOf(maxOut);
+      String maxFinal = "€" + maxToString;
+      
+      Double minOut = s.getMinCost();      
+      String minToString = String.valueOf(minOut);
+      String minFinal = "€" + minToString;
+      
+      Double meanOut = s.getMean();      
+      String meanToString = String.valueOf(meanOut);
+      String meanFinal = "€" + meanToString;
+      
+      Double medianOut = s.getMedian();      
+      String medianToString = String.valueOf(medianOut);
+      String medianFinal = "€" + medianToString;
+      
+      jMeanResult.setText(meanFinal);
+      jMedianResult.setText(medianFinal);
+      jMaxResult.setText(maxFinal);
+      jMinResult.setText(minFinal);
+      
+      
+      
+      } catch (IOException ex) {
+            Logger.getLogger(AdSearch.class.getName()).log(Level.SEVERE, null, ex);
+        }
+     
+    }//GEN-LAST:event_jSearchButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -174,11 +375,21 @@ public class PriceCompare extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField JrefCode;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jBackToHome;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jMax;
+    private javax.swing.JLabel jMaxResult;
+    private javax.swing.JLabel jMean;
+    private javax.swing.JLabel jMeanResult;
+    private javax.swing.JLabel jMedian;
+    private javax.swing.JLabel jMedianResult;
+    private javax.swing.JLabel jMin;
+    private javax.swing.JLabel jMinResult;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton jSearchButton;
+    private javax.swing.JTextField jSubSectionType;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

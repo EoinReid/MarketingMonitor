@@ -60,9 +60,17 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="489" max="-2" attributes="0"/>
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="489" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jBackToHome" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
                   <EmptySpace pref="88" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -70,7 +78,9 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jBackToHome" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -85,6 +95,14 @@
             </Property>
             <Property name="text" type="java.lang.String" value="M"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jBackToHome">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Back To Menu"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jBackToHomeMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -102,9 +120,16 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="338" max="32767" attributes="0"/>
                   <Component id="jTextField1" min="-2" pref="145" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="180" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jGo" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="82" max="-2" attributes="0"/>
+                  <Component id="jPanel3" pref="544" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -112,8 +137,13 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jTextField1" min="-2" pref="42" max="-2" attributes="0"/>
-                  <EmptySpace pref="502" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jTextField1" alignment="3" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="jGo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jPanel3" min="-2" pref="328" max="-2" attributes="0"/>
+                  <EmptySpace pref="156" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -136,6 +166,211 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
           </Events>
         </Component>
+        <Component class="javax.swing.JButton" name="jGo">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Go"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jGoMouseClicked"/>
+          </Events>
+        </Component>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="99" type="rgb"/>
+            </Property>
+            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[150, 150]"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jTitle4" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="jTitle1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jView1" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jTitleResult" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jPriceResult" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jTitle2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jView2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTitle3" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jView3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jView4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="JTitle5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jView5" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jViewResult5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTitleResult5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jViewResult4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jViewResult3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTitleResult2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTitleResult1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jViewResult1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jViewResult2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTitleResult3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTitleResult4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTitle1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTitleResult" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTitleResult1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jView1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jPriceResult" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jViewResult1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTitle2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTitleResult2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jView2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jViewResult2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTitle3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTitleResult3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jView3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jViewResult3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jTitle4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTitleResult4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jView4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jViewResult4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="JTitle5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTitleResult5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jView5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jViewResult5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="55" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jView1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Count"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitle1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Title"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitleResult">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jPriceResult">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitle2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Title"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jView2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Count"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitle3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Title"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jView3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Count"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitle4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Title"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jView4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Count"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitleResult1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jViewResult1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitleResult2">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jViewResult2">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitleResult3">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jViewResult3">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitleResult4">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jViewResult4">
+            </Component>
+            <Component class="javax.swing.JLabel" name="JTitle5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Title"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jView5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View Count"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jTitleResult5">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jViewResult5">
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>

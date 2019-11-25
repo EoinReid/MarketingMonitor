@@ -5,6 +5,21 @@
 package marketingmonitor;
 
 import DTOs.Ad;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.io.StringReader;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
 
 /**
  *
@@ -28,8 +43,33 @@ public class AdPopularity extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
+        jBackToHome = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
+        jGo = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jView1 = new javax.swing.JLabel();
+        jTitle1 = new javax.swing.JLabel();
+        jTitleResult = new javax.swing.JLabel();
+        jPriceResult = new javax.swing.JLabel();
+        jTitle2 = new javax.swing.JLabel();
+        jView2 = new javax.swing.JLabel();
+        jTitle3 = new javax.swing.JLabel();
+        jView3 = new javax.swing.JLabel();
+        jTitle4 = new javax.swing.JLabel();
+        jView4 = new javax.swing.JLabel();
+        jTitleResult1 = new javax.swing.JLabel();
+        jViewResult1 = new javax.swing.JLabel();
+        jTitleResult2 = new javax.swing.JLabel();
+        jViewResult2 = new javax.swing.JLabel();
+        jTitleResult3 = new javax.swing.JLabel();
+        jViewResult3 = new javax.swing.JLabel();
+        jTitleResult4 = new javax.swing.JLabel();
+        jViewResult4 = new javax.swing.JLabel();
+        JTitle5 = new javax.swing.JLabel();
+        jView5 = new javax.swing.JLabel();
+        jTitleResult5 = new javax.swing.JLabel();
+        jViewResult5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1200, 600));
@@ -40,19 +80,33 @@ public class AdPopularity extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 72)); // NOI18N
         jLabel4.setText("M");
 
+        jBackToHome.setText("Back To Menu");
+        jBackToHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBackToHomeMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(489, 489, 489)
-                .addComponent(jLabel4)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(489, 489, 489)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jBackToHome)))
                 .addContainerGap(88, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addContainerGap()
+                .addComponent(jBackToHome)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel4)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -70,21 +124,150 @@ public class AdPopularity extends javax.swing.JFrame {
             }
         });
 
+        jGo.setText("Go");
+        jGo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jGoMouseClicked(evt);
+            }
+        });
+
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setPreferredSize(new java.awt.Dimension(150, 150));
+
+        jView1.setText("View Count");
+
+        jTitle1.setText("Title");
+
+        jTitle2.setText("Title");
+
+        jView2.setText("View Count");
+
+        jTitle3.setText("Title");
+
+        jView3.setText("View Count");
+
+        jTitle4.setText("Title");
+
+        jView4.setText("View Count");
+
+        JTitle5.setText("Title");
+
+        jView5.setText("View Count");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTitle4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jView1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(61, 61, 61)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTitleResult)
+                                    .addComponent(jPriceResult)))
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jTitle2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jView2)
+                                .addComponent(jTitle3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jView3)
+                            .addComponent(jView4)
+                            .addComponent(JTitle5)
+                            .addComponent(jView5))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jViewResult5)
+                            .addComponent(jTitleResult5)
+                            .addComponent(jViewResult4)
+                            .addComponent(jViewResult3)
+                            .addComponent(jTitleResult2)
+                            .addComponent(jTitleResult1)
+                            .addComponent(jViewResult1)
+                            .addComponent(jViewResult2)
+                            .addComponent(jTitleResult3)
+                            .addComponent(jTitleResult4))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTitle1)
+                    .addComponent(jTitleResult)
+                    .addComponent(jTitleResult1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jView1)
+                    .addComponent(jPriceResult)
+                    .addComponent(jViewResult1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTitle2)
+                    .addComponent(jTitleResult2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jView2)
+                    .addComponent(jViewResult2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTitle3)
+                    .addComponent(jTitleResult3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jView3)
+                    .addComponent(jViewResult3))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTitle4)
+                    .addComponent(jTitleResult4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jView4)
+                    .addComponent(jViewResult4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JTitle5)
+                    .addComponent(jTitleResult5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jView5)
+                    .addComponent(jViewResult5))
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(338, Short.MAX_VALUE)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(180, 180, 180))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jGo)
+                .addGap(101, 101, 101))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(502, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jGo))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -112,6 +295,86 @@ public class AdPopularity extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
   
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jBackToHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBackToHomeMouseClicked
+        HomeMenu hm = new HomeMenu();
+        hm.HomeMenuScreen();
+        dispose();
+    }//GEN-LAST:event_jBackToHomeMouseClicked
+
+    private void jGoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jGoMouseClicked
+      
+       try {
+            Socket socket = new Socket("localhost", 8080);  // connect to server socket
+             OutputStream os = socket.getOutputStream();
+            
+            PrintWriter out = new PrintWriter(os, true);
+            String command = "viewCount";
+            out.write(command+"\n");  // write command to socket, and newline terminator
+            out.flush();              // flush (force) the command over the socket     
+            
+      InputStream inputStream = socket.getInputStream();
+      Scanner socketReader = new Scanner(socket.getInputStream());
+      String response = socketReader.nextLine();
+      
+      JsonReader jr = Json.createReader(new StringReader(response));
+      JsonObject jo = jr.readObject();
+      JsonArray adObject = jo.getJsonArray("ads");
+      List<Ad> ads = new ArrayList<>();
+       int count = 0;
+       
+      for(int i= 0; i<adObject.size(); i++)
+      {
+      JsonObject object = adObject.getJsonObject(i);
+      
+      String type = object.getString("Type");
+      String title = object.getString("Title");
+      String priceResult = object.getString("Price");   
+      Double price = Double.parseDouble(priceResult);
+      String section = object.getString("Section");
+      String description = object.getString("Description");   
+      String Id = object.getString("ID"); 
+      String currency = object.getString("Currency"); 
+      String subsection = object.getString("SubSection");
+      String time = object.getString("Time");
+      String viewCountResult = object.getString("ViewCount");
+      int viewCount = Integer.parseInt(viewCountResult);
+      Ad a = new Ad(title,viewCount);
+      ads.add(a);                    
+      }                    
+      
+      jTitleResult1.setText(ads.get(0).getTitle());      
+      String viewCountResult = Integer.toString(ads.get(0).getViewCount());        
+      jViewResult1.setText(viewCountResult);
+      
+      jTitleResult2.setText(ads.get(1).getTitle());      
+      String viewCountResult2 = Integer.toString(ads.get(1).getViewCount());        
+      jViewResult2.setText(viewCountResult2);
+      
+        jTitleResult3.setText(ads.get(1).getTitle());      
+      String viewCountResult3 = Integer.toString(ads.get(2).getViewCount());        
+      jViewResult3.setText(viewCountResult3);
+      
+       jTitleResult4.setText(ads.get(3).getTitle());      
+      String viewCountResult4 = Integer.toString(ads.get(3).getViewCount());        
+      jViewResult4.setText(viewCountResult4);
+      
+       jTitleResult5.setText(ads.get(4).getTitle());      
+      String viewCountResult5 = Integer.toString(ads.get(4).getViewCount());        
+      jViewResult5.setText(viewCountResult5);
+      
+      
+      
+      
+      
+      
+     
+      
+      
+        } catch (IOException ex) {
+            Logger.getLogger(AdSearch.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jGoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -147,12 +410,69 @@ public class AdPopularity extends javax.swing.JFrame {
             }
         });
     }
+    
+        public static void AdPopularityScreen() {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new AdPopularity().setVisible(true);
+            }
+        });
+    }  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JTitle5;
+    private javax.swing.JButton jBackToHome;
+    private javax.swing.JButton jGo;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel jPriceResult;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jTitle1;
+    private javax.swing.JLabel jTitle2;
+    private javax.swing.JLabel jTitle3;
+    private javax.swing.JLabel jTitle4;
+    private javax.swing.JLabel jTitleResult;
+    private javax.swing.JLabel jTitleResult1;
+    private javax.swing.JLabel jTitleResult2;
+    private javax.swing.JLabel jTitleResult3;
+    private javax.swing.JLabel jTitleResult4;
+    private javax.swing.JLabel jTitleResult5;
+    private javax.swing.JLabel jView1;
+    private javax.swing.JLabel jView2;
+    private javax.swing.JLabel jView3;
+    private javax.swing.JLabel jView4;
+    private javax.swing.JLabel jView5;
+    private javax.swing.JLabel jViewResult1;
+    private javax.swing.JLabel jViewResult2;
+    private javax.swing.JLabel jViewResult3;
+    private javax.swing.JLabel jViewResult4;
+    private javax.swing.JLabel jViewResult5;
     // End of variables declaration//GEN-END:variables
 
 }

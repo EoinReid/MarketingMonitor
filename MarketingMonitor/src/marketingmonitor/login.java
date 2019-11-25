@@ -22,7 +22,7 @@ public class login extends javax.swing.JFrame {
      * Creates new form login
      */
     public login() {
-        initComponents();
+        initComponents();                 
     }
 
     /**
@@ -50,6 +50,7 @@ public class login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(2, 24, 89));
         setPreferredSize(new java.awt.Dimension(1200, 600));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(37, 50, 89));
         jPanel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
@@ -157,8 +158,7 @@ public class login extends javax.swing.JFrame {
 
     private void jbtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLoginActionPerformed
       String pw = jPassword.getText();
-      String un = jUsername.getText();
-     
+      String un = jUsername.getText();  
         try {
             Socket socket = new Socket("localhost", 8080);  // connect to server socket
              OutputStream os = socket.getOutputStream();

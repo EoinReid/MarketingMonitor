@@ -33,11 +33,11 @@ public class HomeMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        jAdViews = new javax.swing.JButton();
+        jPriceCompare = new javax.swing.JButton();
+        jAdSearch = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jMLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1200, 600));
@@ -45,11 +45,26 @@ public class HomeMenu extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(37, 50, 89));
         jPanel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
 
-        jButton2.setText("Ad Views");
+        jAdViews.setText("Ad Views");
+        jAdViews.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jAdViewsMouseClicked(evt);
+            }
+        });
 
-        jButton3.setText("Price Compare");
+        jPriceCompare.setText("Price Compare");
+        jPriceCompare.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPriceCompareMouseClicked(evt);
+            }
+        });
 
-        jButton7.setText("Ad Search");
+        jAdSearch.setText("Ad Search");
+        jAdSearch.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jAdSearchMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -58,28 +73,33 @@ public class HomeMenu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(485, 485, 485)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPriceCompare, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jAdViews, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jAdSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(587, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(84, 84, 84)
-                .addComponent(jButton7)
+                .addComponent(jAdSearch)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(jPriceCompare)
                 .addGap(8, 8, 8)
-                .addComponent(jButton2)
+                .addComponent(jAdViews)
                 .addContainerGap(382, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(37, 50, 89));
         jPanel2.setForeground(new java.awt.Color(36, 147, 191));
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 72)); // NOI18N
-        jLabel4.setText("M");
+        jMLogo.setFont(new java.awt.Font("Dialog", 1, 72)); // NOI18N
+        jMLogo.setText("M");
+        jMLogo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMLogoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -87,14 +107,14 @@ public class HomeMenu extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(489, 489, 489)
-                .addComponent(jLabel4)
+                .addComponent(jMLogo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
-                .addComponent(jLabel4)
+                .addComponent(jMLogo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -119,6 +139,33 @@ public class HomeMenu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jAdSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdSearchMouseClicked
+        // TODO add your handling code here:
+         AdSearch as = new AdSearch();
+         as.AdSearchScreen(); 
+         dispose();
+    }//GEN-LAST:event_jAdSearchMouseClicked
+
+    private void jPriceCompareMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPriceCompareMouseClicked
+         PriceCompare pc = new PriceCompare();
+         pc.PriceCompareScreen(); 
+         dispose();
+    }//GEN-LAST:event_jPriceCompareMouseClicked
+
+    private void jAdViewsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdViewsMouseClicked
+       
+         AdPopularity ap = new AdPopularity();
+         ap.AdPopularityScreen(); 
+         dispose();
+        
+    }//GEN-LAST:event_jAdViewsMouseClicked
+
+    private void jMLogoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMLogoMouseClicked
+        HomeMenu hm = new HomeMenu();
+         hm.HomeMenuScreen(); 
+         dispose();
+    }//GEN-LAST:event_jMLogoMouseClicked
   public static void HomeMenuScreen() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -146,23 +193,22 @@ public class HomeMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new HomeMenu().setVisible(true);
-                login.closeWindow();
+                new HomeMenu().setVisible(true);             
             }
         });
     }    
         
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jAdSearch;
+    private javax.swing.JButton jAdViews;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jMLogo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JButton jPriceCompare;
     // End of variables declaration//GEN-END:variables
 }

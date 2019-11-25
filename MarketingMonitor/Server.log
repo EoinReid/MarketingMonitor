@@ -30,3 +30,1131 @@ Nov 20, 2019 12:17:42 PM marketingmonitor.Server start
 INFO: Server Starting....
 Nov 21, 2019 3:20:50 PM marketingmonitor.Server start
 INFO: Server Starting....
+Nov 21, 2019 4:09:26 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:33:39 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:40:20 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:41:51 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:43:19 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:45:27 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:54:37 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:55:50 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:58:17 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 4:58:52 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 5:01:12 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 5:01:29 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 5:02:49 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 5:02:58 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 21, 2019 5:02:58 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 21, 2019 5:05:37 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 5:05:46 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 21, 2019 5:05:46 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 21, 2019 5:05:46 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusernamepassword
+Nov 21, 2019 5:06:43 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 5:06:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 21, 2019 5:06:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 21, 2019 5:06:52 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 21, 2019 5:12:48 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 21, 2019 5:12:58 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 21, 2019 5:12:58 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 21, 2019 5:12:58 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 9:28:59 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 9:29:44 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:29:44 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:29:44 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 9:29:55 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:29:55 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:32:21 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 9:32:32 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:32:32 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:32:32 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 9:32:34 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:32:34 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:32:53 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 9:33:04 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:33:04 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:33:04 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 9:33:09 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:33:09 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:35:21 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 9:35:31 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:35:31 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:35:31 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 9:35:32 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:35:32 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:37:57 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 9:38:09 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:38:09 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 9:38:09 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 9:42:03 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 9:42:03 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:05:30 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:05:41 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:05:41 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:05:41 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 10:05:50 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:05:50 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:06:02 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:06:02 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:06:02 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 10:06:13 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:06:13 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:08:00 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:08:26 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:08:26 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:08:26 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 10:08:31 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:08:31 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:09:29 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:09:44 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:09:44 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:09:44 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 10:09:59 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:09:59 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:13:12 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:13:23 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:13:23 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:13:23 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 10:13:38 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:13:38 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:14:03 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:14:15 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:14:15 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:14:15 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 10:14:20 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:14:20 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:20:30 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:20:42 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:21:18 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:25:19 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:25:40 AM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 10:25:53 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:25:57 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:25:57 AM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 10:25:57 AM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 10:26:14 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:26:14 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 10:26:14 AM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 1:08:53 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 1:09:06 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:09:06 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:09:06 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 1:09:30 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 1:09:30 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 1:11:50 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 1:12:17 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:12:17 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:12:17 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 1:12:35 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 1:12:35 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 1:18:22 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 1:18:37 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:18:37 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:18:37 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 1:18:51 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 1:18:51 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 1:47:25 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 1:48:30 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:48:30 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:48:30 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 1:49:33 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 1:49:45 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:49:45 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 1:49:45 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:00:22 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:00:39 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:00:39 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:00:40 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:04:01 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:04:11 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:04:11 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:04:11 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:05:51 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:06:02 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:06:02 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:06:02 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:06:13 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:08:53 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:08:53 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:08:53 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:09:13 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:09:29 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:09:29 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:09:29 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:09:42 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:11:09 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:11:09 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:11:09 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:14:58 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:15:09 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:15:09 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:15:09 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:18:34 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:18:47 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:18:47 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:18:47 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:18:54 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:21:19 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:21:19 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:21:19 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:21:28 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:21:39 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:21:39 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:23:32 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:27:05 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:27:16 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:27:16 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:27:16 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:27:23 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:27:49 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:27:49 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:27:49 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:30:22 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:30:51 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:30:51 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:30:51 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:31:06 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:34:18 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:34:18 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:34:18 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:44:49 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:45:09 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:45:09 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:45:09 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:45:22 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:47:39 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:47:39 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:47:39 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:47:47 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:47:57 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:47:57 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:47:57 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:48:09 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:48:45 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:48:45 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:48:45 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:49:14 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:49:24 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:49:24 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:49:24 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:49:37 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:49:58 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:49:58 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:49:58 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:50:41 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:50:58 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:51:04 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:51:04 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:51:04 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:51:13 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:51:38 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:51:38 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:51:38 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:51:38 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:52:09 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:52:20 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:52:20 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:52:20 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:52:27 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:54:11 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:54:11 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:54:11 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:54:17 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:54:17 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchjavax.swing.JTextField[,419,15,127x28,layout=javax.swing.plaf.basic.BasicTextUI$UpdateHandler,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.synth.SynthBorder@23bd9099,flags=288,maximumSize=,minimumSize=,preferredSize=,caretColor=,disabledTextColor=DerivedColor(color=142,143,145 parent=nimbusDisabledText offsets=0.0,0.0,0.0,0 pColor=142,143,145,editable=true,margin=javax.swing.plaf.InsetsUIResource[top=0,left=0,bottom=0,right=0],selectedTextColor=DerivedColor(color=255,255,255 parent=nimbusSelectedText offsets=0.0,0.0,0.0,0 pColor=255,255,255,selectionColor=DerivedColor(color=57,105,138 parent=nimbusSelectionBackground offsets=0.0,0.0,0.0,0 pColor=57,105,138,columns=0,columnWidth=0,command=,horizontalAlignment=LEADING]
+Nov 25, 2019 2:54:44 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:54:44 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:56:43 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:56:56 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:56:56 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:56:56 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:57:05 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:57:05 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchjavax.swing.JTextField[,419,15,127x28,layout=javax.swing.plaf.basic.BasicTextUI$UpdateHandler,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.synth.SynthBorder@7fcc63cb,flags=288,maximumSize=,minimumSize=,preferredSize=,caretColor=,disabledTextColor=DerivedColor(color=142,143,145 parent=nimbusDisabledText offsets=0.0,0.0,0.0,0 pColor=142,143,145,editable=true,margin=javax.swing.plaf.InsetsUIResource[top=0,left=0,bottom=0,right=0],selectedTextColor=DerivedColor(color=255,255,255 parent=nimbusSelectedText offsets=0.0,0.0,0.0,0 pColor=255,255,255,selectionColor=DerivedColor(color=57,105,138 parent=nimbusSelectionBackground offsets=0.0,0.0,0.0,0 pColor=57,105,138,columns=0,columnWidth=0,command=,horizontalAlignment=LEADING]
+Nov 25, 2019 2:59:11 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:59:11 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 2:59:17 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 2:59:28 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:59:28 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:59:28 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 2:59:35 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 2:59:35 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchSA65V
+Nov 25, 2019 3:00:25 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:00:25 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:00:34 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:00:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:00:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:00:52 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:01:00 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:01:00 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchSA65V
+Nov 25, 2019 3:02:10 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:02:10 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:02:15 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:02:34 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:02:34 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:02:34 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:02:42 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:02:42 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchSA65V
+Nov 25, 2019 3:06:46 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:06:46 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:08:21 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:08:31 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:08:31 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:08:31 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:08:38 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:08:38 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchSA65V
+Nov 25, 2019 3:09:55 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:09:55 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:12:55 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:13:06 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:13:06 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:13:06 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:13:14 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:13:14 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchSA65V
+Nov 25, 2019 3:13:34 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:13:34 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:14:33 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:14:43 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:14:43 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:14:43 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:14:50 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:14:50 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchSA65V
+Nov 25, 2019 3:15:24 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:15:24 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:21:12 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:21:24 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:21:24 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:21:24 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:21:30 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:21:30 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 3:21:57 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:21:57 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:21:57 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:31:51 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:32:02 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:32:02 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:32:02 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:32:08 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:32:08 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 3:32:32 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:32:32 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 3:32:37 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:32:37 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:32:37 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:32:37 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:41:03 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:41:12 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:41:12 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:41:12 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:41:20 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:41:20 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 3:41:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:41:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:41:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:41:52 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:42:03 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:42:03 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:42:03 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:42:08 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:42:08 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 3:42:11 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:42:11 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:42:11 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:44:36 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 3:44:54 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:44:54 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:44:54 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 3:45:03 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 3:45:03 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 3:45:05 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:45:05 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 3:45:05 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:03:24 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:03:33 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:03:33 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:03:33 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:03:39 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:03:39 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 4:03:45 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:03:45 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:03:45 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:06:18 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:06:28 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:06:28 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:06:28 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:06:36 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:06:36 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 4:06:49 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:06:49 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 4:06:52 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:06:52 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:06:52 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:06:52 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:07:57 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:08:16 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:08:16 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:08:16 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:08:23 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:08:23 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 4:08:28 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:08:28 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:08:28 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:09:24 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:09:34 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:09:34 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:09:34 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:09:41 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:09:41 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 4:09:46 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:09:46 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:09:46 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:10:20 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:10:20 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:10:20 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:10:29 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:10:29 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 4:10:38 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:10:38 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:10:38 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:13:34 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:13:45 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:13:45 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:13:45 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:13:53 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:13:53 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: AdSearchA1
+Nov 25, 2019 4:13:57 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:13:57 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:13:57 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:41:40 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:41:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:41:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:41:52 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:41:58 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:41:58 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: PriceCompareTV
+Nov 25, 2019 4:43:20 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:43:20 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:43:20 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:43:26 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:43:36 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:43:36 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:43:36 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:43:41 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:43:41 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: PriceCompareTV
+Nov 25, 2019 4:43:58 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:43:58 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:43:58 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:44:12 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:44:20 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:44:20 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:44:20 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:44:26 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:44:26 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: PriceCompareTV
+Nov 25, 2019 4:44:40 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:44:40 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:44:40 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:45:07 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:45:16 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:45:16 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:45:16 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:45:21 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:45:21 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: PriceCompareTV
+Nov 25, 2019 4:45:30 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:45:30 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:45:30 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:45:51 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:46:00 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:46:00 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:46:00 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:46:54 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:47:07 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:47:07 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:47:07 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:47:13 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:47:13 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: priceCompareTV
+Nov 25, 2019 4:47:33 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:47:33 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:47:57 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:48:08 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:48:08 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:48:08 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:48:13 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:48:13 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: priceCompareTV
+Nov 25, 2019 4:48:25 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:48:25 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:48:36 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:48:46 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:48:46 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:48:46 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:48:51 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:48:51 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: priceCompareTV
+Nov 25, 2019 4:52:03 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:52:03 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:52:03 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:52:09 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:52:09 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: priceCompareTV
+Nov 25, 2019 4:52:48 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:52:48 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:52:53 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:53:02 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:53:02 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:53:02 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:53:07 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:53:07 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: priceCompareTV
+Nov 25, 2019 4:54:15 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:54:15 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:54:25 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 4:54:35 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:54:35 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:54:35 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 4:54:40 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 4:54:40 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: priceCompareTV
+Nov 25, 2019 4:54:49 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:54:49 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 4:54:49 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:11:05 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:11:16 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:11:16 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:11:16 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:11:19 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:11:19 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:11:57 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:12:06 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:12:06 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:12:06 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:12:52 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:13:04 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:13:04 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:13:04 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:13:07 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:13:07 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:13:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:13:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:13:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:14:30 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:14:57 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:15:09 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:15:09 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:15:09 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:15:12 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:15:12 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:32:44 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:32:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:32:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:32:52 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:32:55 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:32:55 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:33:15 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:33:15 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:33:15 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:33:58 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:34:07 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:34:07 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:34:07 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:34:11 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:34:11 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:34:44 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:34:44 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:34:44 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:34:51 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:35:02 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:35:02 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:35:02 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:35:05 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:35:05 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:35:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:35:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:35:23 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:36:40 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:36:49 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:36:49 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:36:49 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:36:52 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:36:52 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:37:16 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:37:16 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:37:16 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:37:57 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:38:04 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:38:05 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:38:05 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:38:08 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:38:08 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:40:31 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:40:40 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:40:40 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:40:40 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:40:44 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:40:44 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:40:50 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:40:50 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:40:50 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:41:36 PM marketingmonitor.Server start
+INFO: Server Starting....
+Nov 25, 2019 5:41:46 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:41:46 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:41:46 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: Loginusername,password
+Nov 25, 2019 5:41:49 PM marketingmonitor.Server start
+INFO: A Client has connected from the address: /127.0.0.1
+Nov 25, 2019 5:41:49 PM marketingmonitor.Server$ClientHandler run
+INFO: Command Received from the client: viewCount
+Nov 25, 2019 5:41:59 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:41:59 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
+Nov 25, 2019 5:41:59 PM marketingmonitor.Server$ClientHandler run
+WARNING: Exception caught
