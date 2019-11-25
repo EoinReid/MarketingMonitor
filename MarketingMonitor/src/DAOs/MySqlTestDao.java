@@ -224,12 +224,12 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         }
         catch (SQLException e) 
             {
-                throw new DaoException("addMovie() " + e.getMessage());
+                throw new DaoException("addUser() " + e.getMessage());
             }
     }
 
     @Override
-    public void updatePassword(String aPassword, String aUsername) throws DaoException 
+    public void updatePass(String aPassword, String aUsername) throws DaoException 
     {
         Connection con = null;
         PreparedStatement ps = null;
@@ -247,7 +247,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             
         catch (SQLException e) 
             {
-                throw new DaoException("addMovie() " + e.getMessage());
+                throw new DaoException("updatePass() " + e.getMessage());
             }
     }
     

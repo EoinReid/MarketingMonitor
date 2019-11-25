@@ -306,15 +306,16 @@ public class Server {
                 }
                 moviecount++;
 
-                jsonstr += "{\"Id\":\"" + ad.getType() + "\","
+                jsonstr += "{\"Type\":\"" + ad.getType() + "\","
                         + "\"Title\":\"" + ad.getTitle() + "\","
-                        + "\"Genre\":\"" + ad.getPrice() + "\","
-                        + "\"Director\":\"" + ad.getSection() + "\","
-                        + "\"RunTime\":\"" + ad.getDescription() + "\","
-                        + "\"Plot\":\"" + ad.getId() + "\","
-                        + "\"Location\":\"" + ad.getCurrency() + "\","
-                        + "\"Poster\":\"" + ad.getSubSection() + "\","
-                        + "\"Rating\":\"" + ad.getTime() + "\"}";
+                        + "\"Price\":\"" + ad.getPrice() + "\","
+                        + "\"Section\":\"" + ad.getSection() + "\","
+                        + "\"Description\":\"" + ad.getDescription() + "\","
+                        + "\"ID\":\"" + ad.getId() + "\","
+                        + "\"Currency\":\"" + ad.getCurrency() + "\","
+                        + "\"SubSection\":\"" + ad.getSubSection() + "\","
+                        + "\"Time\":\"" + ad.getTime() + "\","
+                        + "\"ViewCount\":\"" + ad.getViewCount() + "\"}";
 
             }
             jsonstr += "] }";
@@ -335,7 +336,8 @@ public class Server {
                     + "\"Plot\":\"" + ad.getId() + "\","
                     + "\"Location\":\"" + ad.getCurrency() + "\","
                     + "\"Poster\":\"" + ad.getSubSection() + "\","
-                    + "\"Rating\":\"" + ad.getTime() + "\"}";
+                    + "\"Time\":\"" + ad.getTime() + "\","
+                    + "\"ViewCount\":\"" + ad.getViewCount() + "\"}";
 
             jsonStr += " }";
 
