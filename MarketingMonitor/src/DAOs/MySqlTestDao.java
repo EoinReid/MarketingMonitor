@@ -204,7 +204,51 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         return ads;
     }
     
+    @Override
+    public void addUser(String aUsername, String aPassword) throws DaoException 
+    {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Ad a = null;
+        try {
+            con = this.getConnection();
+            
+            String query = "INSERT INTO users(username,password) VALUES (?,?) ";
+            ps = con.prepareStatement(query);
+            ps.setString(1, aUsername);
+            ps.setString(2, aPassword);
+            
+            
+            ps.execute();
+        }
+        catch (SQLException e) 
+            {
+                throw new DaoException("addMovie() " + e.getMessage());
+            }
+    }
 
-
+    @Override
+    public void updatePassword(String aPassword, String aUsername) throws DaoException 
+    {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Ad a = null;
+        try {
+            con = this.getConnection();
+            
+            String query = "UPDATE users SET password=?, WHERE username=?";
+            ps = con.prepareStatement(query);
+            ps.setString(1, aPassword);
+            ps.setString(2, aUsername);
+            
+            ps.execute();
+            
+        catch (SQLException e) 
+            {
+                throw new DaoException("addMovie() " + e.getMessage());
+            }
+    }
     
 }
