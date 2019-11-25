@@ -8,6 +8,7 @@ package marketingmonitor;
 import DAOs.TestDaoI;
 import DAOs.MySqlTestDao;
 import DTOs.Ad;
+import DTOs.Statistics;
 import Exceptions.DaoException;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -143,10 +144,7 @@ public class Server {
                 {
                     LOGGER.log(Level.INFO, "Command Received from the client: {0}", message);
                     System.out.println("Server: (ClientHandler): Read command from client " + clientNumber + ": " + message);
-                    if (message.startsWith("testCon")) {
-                        //This is a test function
-                        socketWriter.println("Connected!");  // send message to client
-                    }else if(message.startsWith("Login")){
+                    if(message.startsWith("Login")){
                         String returnPoint;
                         String input = message.substring(6);
                         String[] buildUser = input.split(",");
@@ -155,7 +153,7 @@ public class Server {
                         String AccUser = userLogin.getUsername();
                         String AccPassword = userLogin.getPassword();
                         //Tests if the username and Pasword match
-                        if(AccUser == buildUser[0] && AccPassword == buildUser[1]){
+                        if(AccUser.equals(buildUser[0]) && AccPassword.equals(buildUser[1])){
                             returnPoint = "1";
                         }else{
                             returnPoint = "0";
@@ -190,7 +188,8 @@ public class Server {
                             totalPrice = totalPrice + prices.get(i);
                         }
                         Double mean = totalPrice/noOfReturns;
-                        //TODO Add Json convertion here                        
+                        Statistics s = new Statistics(max,min,mean,median);
+                        String json = convertToJsonStats(s);                        
                       //  socketWriter.println(json);
                     }else if(message.startsWith("viewCount")){ 
                         List<Ad> ads = dao.popularAd();
@@ -344,4 +343,21 @@ public class Server {
 
             return jsonStr;
         }
+    
+    public String convertToJsonStats(Statistics s) throws DaoException {
+        Statistics stat = s;
+
+            String jsonStr = "{\"Statistics\":";
+
+            jsonStr += "{\"maxCost\":\"" + stat.getMaxCost() + "\","
+                    + "\"minCost\":\"" + stat.getMinCost() + "\","
+                    + "\"getMean\":\"" + stat.getMean() + "\","
+                    + "\"getMedian\":\"" + stat.getMedian() + "\"}";
+
+            jsonStr += " }";
+
+            System.out.println(jsonStr);
+
+            return jsonStr;
+    }
 }
