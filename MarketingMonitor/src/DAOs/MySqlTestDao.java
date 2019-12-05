@@ -78,9 +78,9 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price FROM adds WHERE ID = ? ";
+            String query = "SELECT title, price FROM adds WHERE description like ? ";
             ps = con.prepareStatement(query);
-            ps.setString(1, akeyword);
+            ps.setString(1, "%"+akeyword+"%");
 
             //Using a PreparedStatement to execute SQL...
             rs = ps.executeQuery();
@@ -123,10 +123,10 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         try {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
-
-            String query = "SELECT title, price FROM adds WHERE SubSection = ? ORDER BY Price DESC";
+         
+            String query = "SELECT title, price FROM adds WHERE description like ? ORDER BY Price ASC";
             ps = con.prepareStatement(query);
-            ps.setString(1, akeyword);
+            ps.setString(1, "%"+akeyword+"%");
 
             //Using a PreparedStatement to execute SQL...
             rs = ps.executeQuery();
