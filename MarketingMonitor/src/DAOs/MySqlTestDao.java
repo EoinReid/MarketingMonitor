@@ -167,7 +167,7 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price, view_Count FROM adds GROUP BY view_Count LIMIT 5";
+            String query = "SELECT title, price, view_Count FROM adds ORDER BY view_Count DESC LIMIT 5";
             ps = con.prepareStatement(query);
             
 
