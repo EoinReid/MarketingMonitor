@@ -156,7 +156,7 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
         return prices;     
     }
     @Override
-    public List<Ad> popularAd() throws DaoException {
+    public List<Ad> popularAd(String akeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -167,7 +167,56 @@ public class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price, view_Count FROM adds ORDER BY view_Count DESC LIMIT 5";
+            String query = "SELECT title, price, view_Count FROM adds ORDER BY view_Count DESC LIMIT 8 WHERE description like ?";
+            ps = con.prepareStatement(query);
+            
+
+            //Using a PreparedStatement to execute SQL...
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String title = rs.getString("Title");
+                Double price = rs.getDouble("Price");
+                int viewCount = rs.getInt("view_Count");
+                int count = 0;
+                count++;
+                ads.add(new Ad(title,price,viewCount)) ;
+
+            }
+        } catch (SQLException e) {
+            throw new DaoException("popularAd() " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("popularAd() " + e.getMessage());
+            }
+        }
+        
+        return ads;
+    }
+    
+    @Override
+    public List<Ad> popularAdTwo(String akeyword) throws DaoException {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String component;
+        List<Ad> ads = new ArrayList<>();
+        
+        try {
+            //Get connection object using the methods in the super class (MySqlDao.java)...
+            con = this.getConnection();
+
+            String query = "SELECT title, price, view_Count FROM adds ORDER BY view_Count ASC LIMIT 8 WHERE description like ?";
             ps = con.prepareStatement(query);
             
 

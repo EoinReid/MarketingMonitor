@@ -194,8 +194,16 @@ public class Server {
                     }
                   
                     System.out.println("OUTSIDE OUTSIDE");
-                  if(message.startsWith("viewCount")){ 
-                        List<Ad> ads = dao.popularAd();
+                  if(message.startsWith("viewCount")){
+                      String input = message.substring(9);
+                        List<Ad> ads = dao.popularAd(input);
+                        String json = convertToJsonList(ads);
+                        System.out.println(json);
+                        socketWriter.println(json);  // send message to client
+                    }
+                  if(message.startsWith("viewCount2")){
+                      String input = message.substring(9);
+                        List<Ad> ads = dao.popularAd(input);
                         String json = convertToJsonList(ads);
                         System.out.println(json);
                         socketWriter.println(json);  // send message to client

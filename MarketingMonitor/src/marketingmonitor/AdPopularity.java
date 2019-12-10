@@ -376,6 +376,78 @@ public class AdPopularity extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jGoMouseClicked
 
+//    try {
+//            Socket socket = new Socket("localhost", 8080);  // connect to server socket
+//             OutputStream os = socket.getOutputStream();
+//            
+//            PrintWriter out = new PrintWriter(os, true);
+//            String command = "viewCount2";
+//            out.write(command+"\n");  // write command to socket, and newline terminator
+//            out.flush();              // flush (force) the command over the socket     
+//            
+//      InputStream inputStream = socket.getInputStream();
+//      Scanner socketReader = new Scanner(socket.getInputStream());
+//      String response = socketReader.nextLine();
+//      
+//      JsonReader jr = Json.createReader(new StringReader(response));
+//      JsonObject jo = jr.readObject();
+//      JsonArray adObject = jo.getJsonArray("ads");
+//      List<Ad> ads = new ArrayList<>();
+//       int count = 0;
+//       
+//      for(int i= 0; i<adObject.size(); i++)
+//      {
+//      JsonObject object = adObject.getJsonObject(i);
+//      
+//      String type = object.getString("Type");
+//      String title = object.getString("Title");
+//      String priceResult = object.getString("Price");   
+//      Double price = Double.parseDouble(priceResult);
+//      String section = object.getString("Section");
+//      String description = object.getString("Description");   
+//      String Id = object.getString("ID"); 
+//      String currency = object.getString("Currency"); 
+//      String subsection = object.getString("SubSection");
+//      String time = object.getString("Time");
+//      String viewCountResult = object.getString("ViewCount");
+//      int viewCount = Integer.parseInt(viewCountResult);
+//      Ad a = new Ad(title,viewCount);
+//      ads.add(a);                    
+//      }                    
+//      
+//      jTitleResult1.setText(ads.get(0).getTitle());      
+//      String viewCountResult = Integer.toString(ads.get(0).getViewCount());        
+//      jViewResult1.setText(viewCountResult);
+//      
+//      jTitleResult2.setText(ads.get(1).getTitle());      
+//      String viewCountResult2 = Integer.toString(ads.get(1).getViewCount());        
+//      jViewResult2.setText(viewCountResult2);
+//      
+//        jTitleResult3.setText(ads.get(1).getTitle());      
+//      String viewCountResult3 = Integer.toString(ads.get(2).getViewCount());        
+//      jViewResult3.setText(viewCountResult3);
+//      
+//       jTitleResult4.setText(ads.get(3).getTitle());      
+//      String viewCountResult4 = Integer.toString(ads.get(3).getViewCount());        
+//      jViewResult4.setText(viewCountResult4);
+//      
+//       jTitleResult5.setText(ads.get(4).getTitle());      
+//      String viewCountResult5 = Integer.toString(ads.get(4).getViewCount());        
+//      jViewResult5.setText(viewCountResult5);
+//      
+//      
+//      
+//      
+//      
+//      
+//     
+//      
+//      
+//        } catch (IOException ex) {
+//            Logger.getLogger(AdSearch.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//    }
+    
     /**
      * @param args the command line arguments
      */
