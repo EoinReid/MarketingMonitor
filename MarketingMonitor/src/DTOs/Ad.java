@@ -24,13 +24,11 @@ public class Ad {
     private String subSection;
     private Timestamp time;
     private int viewCount;
+    private String county;
 
     //Need to add photo variable (Blob or as possible byte)
 
-    public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time){
-
-   
-
+    public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time, int viewCount, String county) {
         this.type = type;
         this.title = title;
         this.price = price;
@@ -40,12 +38,11 @@ public class Ad {
         this.currency = currency;
         this.subSection = subSection;
         this.time = time;
+        this.viewCount = viewCount;
+        this.county = county;
     }
-    
-    public Ad() 
-    {
-        
 
+    public Ad() {
     }
 
     public Ad(String title, double price) {
@@ -58,103 +55,121 @@ public class Ad {
         this.price = price;
         this.viewCount = viewCount;
     }
-    
-    
 
-    public Enum getType() {
-        return type;
+    public Ad(String title, double price, int viewCount, String county) {
+        this.title = title;
+        this.price = price;
+        this.viewCount = viewCount;
+        this.county = county;
     }
 
     public void setType(Enum type) {
         this.type = type;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public double getPrice() {
-        return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
     }
 
-    public String getSection() {
-        return section;
-    }
-
     public void setSection(String section) {
         this.section = section;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Enum getCurrency() {
-        return currency;
     }
 
     public void setCurrency(Enum currency) {
         this.currency = currency;
     }
 
-    public String getSubSection() {
-        return subSection;
-    }
-
     public void setSubSection(String subSection) {
         this.subSection = subSection;
-    }
-
-    public Timestamp getTime() {
-        return time;
     }
 
     public void setTime(Timestamp time) {
         this.time = time;
     }
 
+    public void setViewCount(int viewCount) {
+        this.viewCount = viewCount;
+    }
+
+    public void setCounty(String county) {
+        this.county = county;
+    }
+
+    public Enum getType() {
+        return type;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getSection() {
+        return section;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Enum getCurrency() {
+        return currency;
+    }
+
+    public String getSubSection() {
+        return subSection;
+    }
+
+    public Timestamp getTime() {
+        return time;
+    }
+
     public int getViewCount() {
         return viewCount;
     }
 
-    public void setViewCount(int viewCount) {
-        this.viewCount = viewCount;
+    public String getCounty() {
+        return county;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Ad{" + "type=" + type + ", title=" + title + ", price=" + price + ", section=" + section + ", description=" + description + ", id=" + id + ", currency=" + currency + ", subSection=" + subSection + ", time=" + time + ", viewCount=" + viewCount + ", county=" + county + '}';
+    }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.type);
-        hash = 53 * hash + Objects.hashCode(this.title);
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
-        hash = 53 * hash + Objects.hashCode(this.section);
-        hash = 53 * hash + Objects.hashCode(this.description);
-        hash = 53 * hash + this.id;
-        hash = 53 * hash + Objects.hashCode(this.currency);
-        hash = 53 * hash + Objects.hashCode(this.subSection);
-        hash = 53 * hash + Objects.hashCode(this.time);
+        hash = 59 * hash + Objects.hashCode(this.type);
+        hash = 59 * hash + Objects.hashCode(this.title);
+        hash = 59 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
+        hash = 59 * hash + Objects.hashCode(this.section);
+        hash = 59 * hash + Objects.hashCode(this.description);
+        hash = 59 * hash + this.id;
+        hash = 59 * hash + Objects.hashCode(this.currency);
+        hash = 59 * hash + Objects.hashCode(this.subSection);
+        hash = 59 * hash + Objects.hashCode(this.time);
+        hash = 59 * hash + this.viewCount;
+        hash = 59 * hash + Objects.hashCode(this.county);
         return hash;
     }
 
@@ -176,6 +191,9 @@ public class Ad {
         if (this.id != other.id) {
             return false;
         }
+        if (this.viewCount != other.viewCount) {
+            return false;
+        }
         if (!Objects.equals(this.title, other.title)) {
             return false;
         }
@@ -186,6 +204,9 @@ public class Ad {
             return false;
         }
         if (!Objects.equals(this.subSection, other.subSection)) {
+            return false;
+        }
+        if (!Objects.equals(this.county, other.county)) {
             return false;
         }
         if (this.type != other.type) {
@@ -200,10 +221,7 @@ public class Ad {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Ad{" + "type=" + type + ", title=" + title + ", price=" + price + ", section=" + section + ", description=" + description + ", id=" + id + ", currency=" + currency + ", subSection=" + subSection + ", time=" + time + '}';
-    }
+    
 
 }
 

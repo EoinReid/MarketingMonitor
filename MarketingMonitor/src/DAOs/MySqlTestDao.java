@@ -113,7 +113,7 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
     
 
     @Override
-    public List<Double> PriceCompare(String akeyword) throws DaoException {
+    public List<Double> PriceCompare(String[] akeyword, String bkeyword) throws DaoException {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -124,9 +124,10 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
             //Get connection object using the methods in the super class (MySqlDao.java)...
             con = this.getConnection();
 
-            String query = "SELECT title, price FROM adds WHERE Title like %?% ORDER BY Price DECENDING";
+            String query = "SELECT title, price FROM adds WHERE Title like ? AND COUNTY = ? ORDER BY Price DECENDING";
             ps = con.prepareStatement(query);
-            ps.setString(1, akeyword);
+            ps.setString(1, "%" +akeyword+ "%");
+            ps.setString(2, bkeyword);
 
             //Using a PreparedStatement to execute SQL...
             rs = ps.executeQuery();
@@ -178,6 +179,56 @@ public abstract class MySqlTestDao extends DAOs.MySqlDao implements TestDaoI {
                 String title = rs.getString("Title");
                 Double price = rs.getDouble("Price");
                 int viewCount = rs.getInt("View Count");
+                int count = 0;
+                count++;
+                ads.add(new Ad(title,price,viewCount)) ;
+
+            }
+        } catch (SQLException e) {
+            throw new DaoException("popularAd() " + e.getMessage());
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (ps != null) {
+                    ps.close();
+                }
+                if (con != null) {
+                    freeConnection(con);
+                }
+            } catch (SQLException e) {
+                throw new DaoException("popularAd() " + e.getMessage());
+            }
+        }
+        
+        return ads;
+    }
+    
+    @Override
+    public List<Ad> AllAd() throws DaoException {
+        Connection con = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String component;
+        List<Ad> ads = new ArrayList<>();
+        
+        try {
+            //Get connection object using the methods in the super class (MySqlDao.java)...
+            con = this.getConnection();
+
+            String query = "SELECT title, price, view_Count, county FROM adds GROUP BY County";
+            ps = con.prepareStatement(query);
+            
+
+            //Using a PreparedStatement to execute SQL...
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String title = rs.getString("Title");
+                Double price = rs.getDouble("Price");
+                int viewCount = rs.getInt("View Count");
+                String county = rs.getString("County");
                 int count = 0;
                 count++;
                 ads.add(new Ad(title,price,viewCount)) ;

@@ -60,14 +60,6 @@ public class Server {
     public void start() {
         try {
 
-
-            logFile = new FileHandler("Server.log", true);
-
-            logFile.setFormatter(new SimpleFormatter());
-            LOGGER.addHandler(logFile);
-
-            LOGGER.info("Server Starting....");
-
             ServerSocket ss = new ServerSocket(8080);  // set up ServerSocket to listen for connections on port 8080
 
             System.out.println("Server: Server started. Listening for connections on port 8080...");
@@ -140,8 +132,10 @@ public class Server {
             String message;
 
             try {
+                
                 while ((message = socketReader.readLine()) != null) // listen at socket for message from client (wait)
                 {
+                    message = socketReader.readLine();
                     LOGGER.log(Level.INFO, "Command Received from the client: {0}", message);
                     System.out.println("Server: (ClientHandler): Read command from client " + clientNumber + ": " + message);
                     if(message.startsWith("Login")){
@@ -168,7 +162,9 @@ public class Server {
                     } else if (message.startsWith("priceCompare")) {
                         //This returns some info about the prices of certain objects
                         String input = message.substring(13);
-                        List<Double> prices = dao.PriceCompare(input);
+                        String[] tokens = input.split(" ");
+                        String county;
+                        List<Double> prices = dao.PriceCompare(tokens,county);
                         double max = prices.get(0);
                         double min = prices.get((prices.size()-1));
                         int noOfReturns = prices.size();
@@ -198,6 +194,7 @@ public class Server {
                     }
                 }
                 socket.close();
+                
             } catch (IOException e) {
 
                 LOGGER.warning("Exception caught");
@@ -205,6 +202,7 @@ public class Server {
             } catch (DaoException ex) {
                 Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
             }
+            
             System.out.println("Server: (ClientHandler): Handler for Client " + clientNumber + " is terminating .....");
         }
     }
