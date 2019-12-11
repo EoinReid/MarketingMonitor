@@ -211,9 +211,9 @@ public class login extends javax.swing.JFrame {
             String response = socketReader.nextLine();
 
             if(response.equals("1")){
-                HomeMenu hm = new HomeMenu();
-                hm.HomeMenuScreen();
-                dispose();
+                  AdSearch2 as = new AdSearch2();
+                  as.AdSearchScreen(); 
+                    dispose();
             }
         }catch(IOException ex) {
             Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);

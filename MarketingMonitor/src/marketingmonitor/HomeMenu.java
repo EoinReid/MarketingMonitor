@@ -142,9 +142,7 @@ public class HomeMenu extends javax.swing.JFrame {
 
     private void jAdSearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdSearchMouseClicked
         // TODO add your handling code here:
-         AdSearch as = new AdSearch();
-         as.AdSearchScreen(); 
-         dispose();
+       
     }//GEN-LAST:event_jAdSearchMouseClicked
 
     private void jPriceCompareMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPriceCompareMouseClicked
@@ -202,13 +200,9 @@ public class HomeMenu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jAdSearch;
     private javax.swing.JButton jAdViews;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jMLogo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JButton jPriceCompare;
     // End of variables declaration//GEN-END:variables
 }
