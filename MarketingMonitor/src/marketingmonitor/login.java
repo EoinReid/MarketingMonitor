@@ -38,7 +38,6 @@ public class login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jSidebar = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
-        jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jPassword = new javax.swing.JPasswordField();
@@ -46,11 +45,14 @@ public class login extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jUsername = new javax.swing.JTextField();
+        jErrorMsg = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jbtnLogin1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jXBtn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 400));
 
         jPanel1.setBackground(new java.awt.Color(54, 33, 89));
 
@@ -60,21 +62,13 @@ public class login extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jSidebar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 200, 50));
 
-        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Market Monitor");
-        jSidebar.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
-
         jPanel3.setBackground(new java.awt.Color(85, 65, 118));
 
         jLabel3.setBackground(new java.awt.Color(222, 222, 222));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/marketingmonitor/images/icons8_lock_30px.png"))); // NOI18N
 
-        jPassword.setBackground(new java.awt.Color(255, 255, 255));
         jPassword.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        jPassword.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -108,11 +102,6 @@ public class login extends javax.swing.JFrame {
                 jbtnLoginMouseClicked(evt);
             }
         });
-        jbtnLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnLoginActionPerformed(evt);
-            }
-        });
         jSidebar.add(jbtnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(85, 65, 118));
@@ -121,9 +110,7 @@ public class login extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/marketingmonitor/images/icons8_person_30px.png"))); // NOI18N
 
-        jUsername.setBackground(new java.awt.Color(255, 255, 255));
         jUsername.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        jUsername.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -151,9 +138,43 @@ public class login extends javax.swing.JFrame {
 
         jSidebar.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, -1, 40));
 
+        jErrorMsg.setBackground(new java.awt.Color(255, 255, 255));
+        jErrorMsg.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jErrorMsg.setForeground(new java.awt.Color(255, 0, 0));
+        jSidebar.add(jErrorMsg, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 320, 230, -1));
+
+        jLabel11.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Market Monitor");
+        jSidebar.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        jbtnLogin1.setText("Log in");
+        jbtnLogin1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbtnLogin1MouseClicked(evt);
+            }
+        });
+        jbtnLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnLogin1ActionPerformed(evt);
+            }
+        });
+        jSidebar.add(jbtnLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, -1));
+
         jLabel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 jLabel1MouseDragged(evt);
+            }
+        });
+
+        jXBtn.setBackground(new java.awt.Color(255, 255, 255));
+        jXBtn.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jXBtn.setForeground(new java.awt.Color(255, 255, 255));
+        jXBtn.setText("X");
+        jXBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jXBtnMousePressed(evt);
             }
         });
 
@@ -161,23 +182,29 @@ public class login extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 735, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jXBtn)
+                .addContainerGap())
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(278, Short.MAX_VALUE)
                     .addComponent(jSidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addContainerGap(278, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 564, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jXBtn))
+                .addContainerGap(435, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jSidebar, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSidebar, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -188,11 +215,22 @@ public class login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseDragged
+         int cordX = evt.getXOnScreen();
+        int cordY = evt.getYOnScreen();
+        
+        System.out.println(cordX+","+cordY);
+        
+        this.setLocation(cordX,cordY);
+    }//GEN-LAST:event_jLabel1MouseDragged
 
     private void jbtnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbtnLoginMouseClicked
         try{
@@ -211,39 +249,30 @@ public class login extends javax.swing.JFrame {
             String response = socketReader.nextLine();
 
             if(response.equals("1")){
-                  AdSearch2 as = new AdSearch2();
-                  as.AdSearchScreen(); 
-                    dispose();
+                AdSearch2 as = new AdSearch2();
+                as.AdSearchScreen();
+                dispose();
+            }else {
+            jErrorMsg.setText("Error Incorrect Username or Password - Please try again");
             }
-        }catch(IOException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+        }catch(NullPointerException ex) {
+             
+        } catch (IOException ex) {
+            jErrorMsg.setText("Error Incorrect Username or Password - Please try again");
         }
     }//GEN-LAST:event_jbtnLoginMouseClicked
 
-    private void jbtnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLoginActionPerformed
-        String pw = jPassword.getText();
-        String un = jUsername.getText();
-        try {
-            Socket socket = new Socket("localhost", 8080);  // connect to server socket
-            OutputStream os = socket.getOutputStream();
+    private void jXBtnMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jXBtnMousePressed
+        System.exit(0);
+    }//GEN-LAST:event_jXBtnMousePressed
 
-            PrintWriter out = new PrintWriter(os, true);
-            out.write("Login " +un+"," +pw);  // write command to socket, and newline terminator
-            out.flush();              // flush (force) the command over the socket
-        } catch (IOException ex) {
-            Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    private void jbtnLogin1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbtnLogin1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnLogin1MouseClicked
 
-    }//GEN-LAST:event_jbtnLoginActionPerformed
-
-    private void jLabel1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseDragged
-         int cordX = evt.getXOnScreen();
-        int cordY = evt.getYOnScreen();
-        
-        System.out.println(cordX+","+cordY);
-        
-        this.setLocation(cordX,cordY);
-    }//GEN-LAST:event_jLabel1MouseDragged
+    private void jbtnLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnLogin1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbtnLogin1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,10 +311,11 @@ public class login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jErrorMsg;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -293,6 +323,8 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel jSidebar;
     private javax.swing.JTextField jUsername;
+    private javax.swing.JLabel jXBtn;
     private javax.swing.JButton jbtnLogin;
+    private javax.swing.JButton jbtnLogin1;
     // End of variables declaration//GEN-END:variables
 }
