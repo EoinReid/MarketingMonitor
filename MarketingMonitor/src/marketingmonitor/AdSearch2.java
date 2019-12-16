@@ -41,6 +41,7 @@ public class AdSearch2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jBackground = new javax.swing.JPanel();
         jSidebar = new javax.swing.JPanel();
         jAdSearchPanel = new javax.swing.JPanel();
@@ -61,11 +62,19 @@ public class AdSearch2 extends javax.swing.JFrame {
         jSearchIcon = new javax.swing.JLabel();
         jXbtn = new javax.swing.JLabel();
         jDragProgram = new javax.swing.JLabel();
+        jDoneDealResult = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jDoneDeal = new javax.swing.JLabel();
+        jTitle1 = new javax.swing.JLabel();
+        jPrice = new javax.swing.JLabel();
         jTitleResult = new javax.swing.JLabel();
         jPriceResult = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jViews1 = new javax.swing.JLabel();
+        jViewResult = new javax.swing.JLabel();
+        jCounty = new javax.swing.JLabel();
+        jCountyResult = new javax.swing.JLabel();
+        jEbay = new javax.swing.JLabel();
+        jEbayResult = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -196,10 +205,10 @@ public class AdSearch2 extends javax.swing.JFrame {
                 .addGroup(jAdPopularityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jAdPopularity))
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
         );
 
-        jSidebar.add(jAdPopularityPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, -1, -1));
+        jSidebar.add(jAdPopularityPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, -1, 40));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jSidebar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 200, 50));
@@ -288,33 +297,55 @@ public class AdSearch2 extends javax.swing.JFrame {
             }
         });
         jBackground.add(jDragProgram, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 40));
-        jBackground.add(jTitleResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 40, 20));
-        jBackground.add(jPriceResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 40, 20));
+
+        jDoneDealResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jDoneDealResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 350, 130, 30));
         jBackground.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, -1, -1));
 
-        jTable1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Title", "Price", "ID", "Ebay", "DoneDeal"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Float.class, java.lang.String.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
+        jDoneDeal.setBackground(new java.awt.Color(255, 255, 255));
+        jDoneDeal.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jDoneDeal.setText("DoneDeal:");
+        jBackground.add(jDoneDeal, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, -1, 29));
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jTable1.setFillsViewportHeight(true);
-        jTable1.setSelectionBackground(new java.awt.Color(255, 255, 255));
-        jScrollPane1.setViewportView(jTable1);
+        jTitle1.setBackground(new java.awt.Color(255, 255, 255));
+        jTitle1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTitle1.setText("Title:");
+        jBackground.add(jTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, -1, 29));
 
-        jBackground.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 920, 270));
+        jPrice.setBackground(new java.awt.Color(255, 255, 255));
+        jPrice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jPrice.setText("Price:");
+        jBackground.add(jPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, -1, 29));
+
+        jTitleResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jTitleResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 340, 30));
+
+        jPriceResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jPriceResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 130, 30));
+
+        jViews1.setBackground(new java.awt.Color(255, 255, 255));
+        jViews1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jViews1.setText("Views:");
+        jBackground.add(jViews1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, 29));
+
+        jViewResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jViewResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 130, 30));
+
+        jCounty.setBackground(new java.awt.Color(255, 255, 255));
+        jCounty.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jCounty.setText("County:");
+        jBackground.add(jCounty, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, -1, 29));
+
+        jCountyResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jCountyResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 130, 30));
+
+        jEbay.setBackground(new java.awt.Color(255, 255, 255));
+        jEbay.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jEbay.setText("Ebay:");
+        jBackground.add(jEbay, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 320, -1, 29));
+
+        jEbayResult.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jEbayResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 130, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -332,6 +363,102 @@ public class AdSearch2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jDragProgramMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDragProgramMouseDragged
+        int cordX = evt.getXOnScreen();
+        int cordY = evt.getYOnScreen();
+
+        System.out.println(cordX+","+cordY);
+
+        this.setLocation(cordX,cordY);
+    }//GEN-LAST:event_jDragProgramMouseDragged
+
+    private void jXbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jXbtnMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jXbtnMouseClicked
+
+    private void jSearchIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSearchIconMouseClicked
+        String refCode = JrefCode.getText();
+        System.out.println(refCode);
+        try {
+            Socket socket = new Socket("localhost", 8080);  // connect to server socket
+            OutputStream os = socket.getOutputStream();
+
+            PrintWriter out = new PrintWriter(os, true);
+            String command = "AdSearch";
+            out.write(command +refCode+"\n");  // write command to socket, and newline terminator
+            out.flush();              // flush (force) the command over the socket
+
+            InputStream inputStream = socket.getInputStream();
+            Scanner socketReader = new Scanner(socket.getInputStream());
+            String response = socketReader.nextLine();
+            JsonReader jr = Json.createReader(new StringReader(response));
+            JsonObject jo = jr.readObject();
+
+            JsonObject object = jo.getJsonObject("ads");
+            String type = object.getString("Type");
+            String title = object.getString("Title");
+            String priceResult = object.getString("Price");
+            Double price = Double.parseDouble(priceResult);
+            String section = object.getString("Section");
+            String description = object.getString("Description");
+            String Id = object.getString("Id");
+            String currency = object.getString("Currency");
+            String subsection = object.getString("Subsection");
+            String time = object.getString("Time");
+            String viewCountResult  = object.getString("ViewCount");
+            int viewCount = Integer.parseInt(viewCountResult);
+            String county = object.getString("County");
+            String ebay = object.getString("Ebay");
+            String donedeal = object.getString("DoneDeal");
+
+            Ad a = new Ad(title,price,viewCount,county, ebay, donedeal);
+            String titleOut = a.getTitle();
+            Double priceOut = a.getPrice();
+            int viewOut = a.getViewCount();
+            String priceString = String.valueOf(priceOut);
+            String priceThree = "€" + priceString;
+            String countyOut = a.getCounty();
+            String ebayOut = a.getEbay();
+            String donedealOut = a.getDoneDeal();
+
+            jTitleResult.setText(titleOut);
+            jPriceResult.setText(String.valueOf(priceThree));
+            jViewResult.setText(String.valueOf(viewOut));
+            jCountyResult.setText(countyOut);
+            jEbayResult.setText(ebayOut);
+            jDoneDealResult.setText(donedealOut);      
+
+        } catch (IOException ex) {
+            System.out.println("Error with Json Conversation");
+        }
+    }//GEN-LAST:event_jSearchIconMouseClicked
+
+    private void JrefCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JrefCodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JrefCodeActionPerformed
+
+    private void jAdPopularityPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdPopularityPanelMousePressed
+        AdPopularity2 ap = new AdPopularity2();
+        ap.AdPopularityScreen();
+        dispose();
+    }//GEN-LAST:event_jAdPopularityPanelMousePressed
+
+    private void jPriceComparePanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPriceComparePanelMousePressed
+        PriceCompare2 pc = new PriceCompare2();
+        pc.PriceCompareScreen();
+        dispose();
+    }//GEN-LAST:event_jPriceComparePanelMousePressed
+
+    private void jAdSearchPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdSearchPanelMousePressed
+        AdSearch2 as = new AdSearch2();
+        as.AdSearchScreen();
+        dispose();
+    }//GEN-LAST:event_jAdSearchPanelMousePressed
+
+    private void jAdSearchPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdSearchPanelMouseClicked
+
+    }//GEN-LAST:event_jAdSearchPanelMouseClicked
+
      public static void AdSearchScreen() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -346,13 +473,13 @@ public class AdSearch2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -364,95 +491,6 @@ public class AdSearch2 extends javax.swing.JFrame {
         });
     }   
      
-    private void jDragProgramMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jDragProgramMouseDragged
-        int cordX = evt.getXOnScreen();
-        int cordY = evt.getYOnScreen();
-        
-        System.out.println(cordX+","+cordY);
-        
-        this.setLocation(cordX,cordY);
-    }//GEN-LAST:event_jDragProgramMouseDragged
-
-    private void JrefCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JrefCodeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_JrefCodeActionPerformed
-
-    private void jXbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jXbtnMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_jXbtnMouseClicked
-
-    private void jSearchIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSearchIconMouseClicked
-     String refCode = JrefCode.getText();
-        System.out.println(refCode);
-       try {
-            Socket socket = new Socket("localhost", 8080);  // connect to server socket
-             OutputStream os = socket.getOutputStream();
-            
-            PrintWriter out = new PrintWriter(os, true);
-            String command = "AdSearch";
-            out.write(command +refCode+"\n");  // write command to socket, and newline terminator
-            out.flush();              // flush (force) the command over the socket     
-            
-      InputStream inputStream = socket.getInputStream();
-      Scanner socketReader = new Scanner(socket.getInputStream());
-      String response = socketReader.nextLine();
-      JsonReader jr = Json.createReader(new StringReader(response));
-      JsonObject jo = jr.readObject();
-            
-      JsonObject object = jo.getJsonObject("ads");
-      String type = object.getString("Type");
-      String title = object.getString("Title");
-      String priceResult = object.getString("Price");   
-      Double price = Double.parseDouble(priceResult);
-      String section = object.getString("Section");
-      String description = object.getString("Description");   
-      String Id = object.getString("Id"); 
-      String currency = object.getString("Currency"); 
-      String subsection = object.getString("Subsection");
-      String time = object.getString("Time");
-      String viewCount = object.getString("ViewCount");
-      
-      Ad a = new Ad(title,price);
-      String titleOut = a.getTitle();
-      Double priceOut = a.getPrice();      
-      String priceString = String.valueOf(priceOut);
-      String priceThree = "€" + priceString;
-      
-      jTitleResult.setText(titleOut);
-      jPriceResult.setText(priceThree);
-      
-     
-      
-      
-        } catch (IOException ex) {
-            Logger.getLogger(AdSearch.class.getName()).log(Level.SEVERE, null, ex);
-        }                                      
-    }//GEN-LAST:event_jSearchIconMouseClicked
-
-    private void jAdSearchPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdSearchPanelMouseClicked
-      
-    }//GEN-LAST:event_jAdSearchPanelMouseClicked
-
-    private void jPriceComparePanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPriceComparePanelMousePressed
-        PriceCompare2 pc = new PriceCompare2();        
-         pc.PriceCompareScreen(); 
-         dispose();
-      
-    }//GEN-LAST:event_jPriceComparePanelMousePressed
-
-    private void jAdSearchPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdSearchPanelMousePressed
-            AdSearch2 as = new AdSearch2();        
-         as.AdSearchScreen(); 
-         dispose();
-    
-    }//GEN-LAST:event_jAdSearchPanelMousePressed
-
-    private void jAdPopularityPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdPopularityPanelMousePressed
-         AdPopularity2 ap = new AdPopularity2();        
-         ap.AdPopularityScreen(); 
-         dispose();
-    }//GEN-LAST:event_jAdPopularityPanelMousePressed
-
     
     void setColour(JPanel jp){
     jp.setBackground(new Color(85,65,118));   
@@ -501,12 +539,19 @@ public class AdSearch2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField JrefCode;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jAdPopularity;
     private javax.swing.JPanel jAdPopularityPanel;
     private javax.swing.JLabel jAdSearch;
     private javax.swing.JPanel jAdSearchPanel;
     private javax.swing.JPanel jBackground;
+    private javax.swing.JLabel jCounty;
+    private javax.swing.JLabel jCountyResult;
+    private javax.swing.JLabel jDoneDeal;
+    private javax.swing.JLabel jDoneDealResult;
     private javax.swing.JLabel jDragProgram;
+    private javax.swing.JLabel jEbay;
+    private javax.swing.JLabel jEbayResult;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -514,16 +559,18 @@ public class AdSearch2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jPrice;
     private javax.swing.JLabel jPriceCompare;
     private javax.swing.JPanel jPriceComparePanel;
     private javax.swing.JLabel jPriceResult;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel jSearchIcon;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel jSidebar;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel jTitle1;
     private javax.swing.JLabel jTitleResult;
+    private javax.swing.JLabel jViewResult;
+    private javax.swing.JLabel jViews1;
     private javax.swing.JLabel jXbtn;
     // End of variables declaration//GEN-END:variables
 }

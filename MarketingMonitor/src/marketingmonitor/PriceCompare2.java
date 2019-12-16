@@ -4,6 +4,7 @@
 package marketingmonitor;
 
 import DTOs.Ad;
+import DTOs.Statistics;
 import java.awt.Color;
 import java.io.IOException;
 import java.io.InputStream;
@@ -59,11 +60,20 @@ public class PriceCompare2 extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         JrefCode = new javax.swing.JTextField();
         jSearchIcon = new javax.swing.JLabel();
+        jCountyBox = new javax.swing.JComboBox<>();
         jXbtn = new javax.swing.JLabel();
         jDragProgram = new javax.swing.JLabel();
         jTitleResult = new javax.swing.JLabel();
         jPriceResult = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
+        jTitle1 = new javax.swing.JLabel();
+        jMax = new javax.swing.JLabel();
+        jPrice = new javax.swing.JLabel();
+        jMin = new javax.swing.JLabel();
+        jViews1 = new javax.swing.JLabel();
+        jMean = new javax.swing.JLabel();
+        jCounty = new javax.swing.JLabel();
+        jMedian = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -119,7 +129,7 @@ public class PriceCompare2 extends javax.swing.JFrame {
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
-        jSidebar.add(jAdSearchPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 270, 39));
+        jSidebar.add(jAdSearchPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 270, 40));
 
         jPriceComparePanel.setBackground(new java.awt.Color(85, 65, 118));
         jPriceComparePanel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -224,6 +234,7 @@ public class PriceCompare2 extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Enter keywords to compare prices, John.");
 
+        JrefCode.setText("         ");
         JrefCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(54, 33, 89)));
         JrefCode.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,6 +249,17 @@ public class PriceCompare2 extends javax.swing.JFrame {
             }
         });
 
+        jCountyBox.setEditable(true);
+        jCountyBox.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
+        jCountyBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down", "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford", "Wicklow" }));
+        jCountyBox.setToolTipText("");
+        jCountyBox.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jCountyBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCountyBoxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -249,7 +271,9 @@ public class PriceCompare2 extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JrefCode, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCountyBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JrefCode))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSearchIcon)))
                 .addContainerGap(480, Short.MAX_VALUE))
@@ -263,7 +287,9 @@ public class PriceCompare2 extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                         .addComponent(JrefCode))
                     .addComponent(jSearchIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCountyBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addContainerGap())
         );
@@ -290,6 +316,38 @@ public class PriceCompare2 extends javax.swing.JFrame {
         jBackground.add(jTitleResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 40, 20));
         jBackground.add(jPriceResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 40, 20));
         jBackground.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, -1, -1));
+
+        jTitle1.setBackground(new java.awt.Color(255, 255, 255));
+        jTitle1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTitle1.setText("Max:");
+        jBackground.add(jTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, -1, 29));
+
+        jMax.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 200, 180, 30));
+
+        jPrice.setBackground(new java.awt.Color(255, 255, 255));
+        jPrice.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jPrice.setText("Min:");
+        jBackground.add(jPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, -1, 29));
+
+        jMin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 130, 30));
+
+        jViews1.setBackground(new java.awt.Color(255, 255, 255));
+        jViews1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jViews1.setText("Mean:");
+        jBackground.add(jViews1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, 29));
+
+        jMean.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jMean, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 260, 130, 30));
+
+        jCounty.setBackground(new java.awt.Color(255, 255, 255));
+        jCounty.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jCounty.setText("Median:");
+        jBackground.add(jCounty, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, -1, 29));
+
+        jMedian.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jBackground.add(jMedian, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 130, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -321,13 +379,13 @@ public class PriceCompare2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PriceCompare2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PriceCompare2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PriceCompare2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PriceCompare2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -357,15 +415,17 @@ public class PriceCompare2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jXbtnMouseClicked
 
     private void jSearchIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSearchIconMouseClicked
-     String refCode = JrefCode.getText();
+        String refCode = JrefCode.getText();
+        String countyChosen = jCountyBox.getSelectedItem().toString();
+        System.out.println(countyChosen);
         System.out.println(refCode);
        try {
             Socket socket = new Socket("localhost", 8080);  // connect to server socket
              OutputStream os = socket.getOutputStream();
             
             PrintWriter out = new PrintWriter(os, true);
-            String command = "AdSearch";
-            out.write(command +refCode+"\n");  // write command to socket, and newline terminator
+            String command = "priceCompare";
+            out.write(command +refCode+" "+ countyChosen +"\n");  // write command to socket, and newline terminator
             out.flush();              // flush (force) the command over the socket     
             
       InputStream inputStream = socket.getInputStream();
@@ -374,33 +434,43 @@ public class PriceCompare2 extends javax.swing.JFrame {
       JsonReader jr = Json.createReader(new StringReader(response));
       JsonObject jo = jr.readObject();
             
-      JsonObject object = jo.getJsonObject("ads");
-      String type = object.getString("Type");
-      String title = object.getString("Title");
-      String priceResult = object.getString("Price");   
-      Double price = Double.parseDouble(priceResult);
-      String section = object.getString("Section");
-      String description = object.getString("Description");   
-      String Id = object.getString("Id"); 
-      String currency = object.getString("Currency"); 
-      String subsection = object.getString("Subsection");
-      String time = object.getString("Time");
-      String viewCount = object.getString("ViewCount");
+      JsonObject object = jo.getJsonObject("Statistics");
+      String maxResult = object.getString("maxCost");
+      double max = Double.parseDouble(maxResult);
+      String minResult = object.getString("minCost");
+      double min = Double.parseDouble(minResult);
+                     
+      String meanResult = object.getString("getMean");
+      double mean = Double.parseDouble(meanResult);
+      String medianResult = object.getString("getMedian");
+      double median = Double.parseDouble(medianResult);
       
-      Ad a = new Ad(title,price);
-      String titleOut = a.getTitle();
-      Double priceOut = a.getPrice();      
-      String priceString = String.valueOf(priceOut);
-      String priceThree = "€" + priceString;
+      Statistics s = new Statistics(max,min,mean,median);
       
-      jTitleResult.setText(titleOut);
-      jPriceResult.setText(priceThree);
-      
+     Double maxOut = s.getMaxCost();
+     String maxToString = String.valueOf(maxOut);
+     String maxFinal = "€" + maxToString;
      
+     Double minOut = s.getMinCost();
+     String minToString = String.valueOf(minOut);
+     String minFinal = "€" + minToString;
+     
+        Double meanOut = s.getMean();      
+      String meanToString = String.valueOf(meanOut);
+      String meanFinal = "€" + meanToString;
+      
+      Double medianOut = s.getMedian();      
+      String medianToString = String.valueOf(medianOut);
+      String medianFinal = "€" + medianToString;
+      
+      jMean.setText(meanFinal);
+      jMedian.setText(medianFinal);
+      jMax.setText(maxFinal);
+      jMin.setText(minFinal);
       
       
         } catch (IOException ex) {
-            Logger.getLogger(AdSearch.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PriceCompare2.class.getName()).log(Level.SEVERE, null, ex);
         }                                      
     }//GEN-LAST:event_jSearchIconMouseClicked
 
@@ -418,13 +488,13 @@ public class PriceCompare2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PriceCompare2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PriceCompare2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PriceCompare2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PriceCompare2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -458,6 +528,10 @@ public class PriceCompare2 extends javax.swing.JFrame {
          ap.AdPopularityScreen(); 
          dispose();
     }//GEN-LAST:event_jAdPopularityPanelMousePressed
+
+    private void jCountyBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCountyBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCountyBoxActionPerformed
 
     
     void setColour(JPanel jp){
@@ -514,6 +588,8 @@ public class PriceCompare2 extends javax.swing.JFrame {
     private javax.swing.JLabel jAdSearch;
     private javax.swing.JPanel jAdSearchPanel;
     private javax.swing.JPanel jBackground;
+    private javax.swing.JLabel jCounty;
+    private javax.swing.JComboBox<String> jCountyBox;
     private javax.swing.JLabel jDragProgram;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -521,7 +597,12 @@ public class PriceCompare2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jMax;
+    private javax.swing.JLabel jMean;
+    private javax.swing.JLabel jMedian;
+    private javax.swing.JLabel jMin;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jPrice;
     private javax.swing.JLabel jPriceCompare;
     private javax.swing.JPanel jPriceComparePanel;
     private javax.swing.JLabel jPriceResult;
@@ -529,7 +610,9 @@ public class PriceCompare2 extends javax.swing.JFrame {
     private javax.swing.JLabel jSearchIcon;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel jSidebar;
+    private javax.swing.JLabel jTitle1;
     private javax.swing.JLabel jTitleResult;
+    private javax.swing.JLabel jViews1;
     private javax.swing.JLabel jXbtn;
     // End of variables declaration//GEN-END:variables
 }

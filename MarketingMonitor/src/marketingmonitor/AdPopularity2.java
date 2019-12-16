@@ -14,6 +14,7 @@ import java.net.Socket;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.control.ComboBox;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
@@ -59,7 +60,7 @@ public class AdPopularity2 extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         JrefCode = new javax.swing.JTextField();
         jSearchIcon = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jCountyBox = new javax.swing.JComboBox<>();
         jXbtn = new javax.swing.JLabel();
         jDragProgram = new javax.swing.JLabel();
         jTitleResult = new javax.swing.JLabel();
@@ -117,12 +118,12 @@ public class AdPopularity2 extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jAdSearch))
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
         );
 
-        jSidebar.add(jAdSearchPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 270, 39));
+        jSidebar.add(jAdSearchPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 270, 40));
 
-        jPriceComparePanel.setBackground(new java.awt.Color(85, 65, 118));
+        jPriceComparePanel.setBackground(new java.awt.Color(64, 43, 100));
         jPriceComparePanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPriceComparePanelMousePressed(evt);
@@ -161,7 +162,7 @@ public class AdPopularity2 extends javax.swing.JFrame {
 
         jSidebar.add(jPriceComparePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
-        jAdPopularityPanel.setBackground(new java.awt.Color(64, 43, 100));
+        jAdPopularityPanel.setBackground(new java.awt.Color(85, 65, 118));
         jAdPopularityPanel.setPreferredSize(new java.awt.Dimension(270, 39));
         jAdPopularityPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -196,10 +197,10 @@ public class AdPopularity2 extends javax.swing.JFrame {
                 .addGroup(jAdPopularityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jAdPopularity))
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
         );
 
-        jSidebar.add(jAdPopularityPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 270, 39));
+        jSidebar.add(jAdPopularityPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 270, 40));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jSidebar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 200, 50));
@@ -218,12 +219,12 @@ public class AdPopularity2 extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Price Compare");
+        jLabel2.setText("Ad Popularity");
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Enter keywords to compare prices, John.");
+        jLabel8.setText("Enter keywords & choose a county to see your ad's popularity");
 
         JrefCode.setText("         ");
         JrefCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(54, 33, 89)));
@@ -240,13 +241,13 @@ public class AdPopularity2 extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down", "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford", "Wicklow" }));
-        jComboBox1.setToolTipText("");
-        jComboBox1.setBorder(null);
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jCountyBox.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
+        jCountyBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down", "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford", "Wicklow" }));
+        jCountyBox.setToolTipText("");
+        jCountyBox.setBorder(null);
+        jCountyBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jCountyBoxActionPerformed(evt);
             }
         });
 
@@ -262,11 +263,11 @@ public class AdPopularity2 extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCountyBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(JrefCode, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSearchIcon)))
-                .addContainerGap(480, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,7 +279,7 @@ public class AdPopularity2 extends javax.swing.JFrame {
                         .addComponent(JrefCode))
                     .addComponent(jSearchIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jCountyBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addContainerGap())
@@ -337,13 +338,13 @@ public class AdPopularity2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -374,6 +375,7 @@ public class AdPopularity2 extends javax.swing.JFrame {
 
     private void jSearchIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSearchIconMouseClicked
      String refCode = JrefCode.getText();
+
         System.out.println(refCode);
        try {
             Socket socket = new Socket("localhost", 8080);  // connect to server socket
@@ -416,7 +418,7 @@ public class AdPopularity2 extends javax.swing.JFrame {
       
       
         } catch (IOException ex) {
-            Logger.getLogger(AdSearch.class.getName()).log(Level.SEVERE, null, ex);
+           System.out.println("Error Json Conversion Failed");
         }                                      
     }//GEN-LAST:event_jSearchIconMouseClicked
 
@@ -434,13 +436,13 @@ public class AdPopularity2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AdPopularity2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -475,9 +477,9 @@ public class AdPopularity2 extends javax.swing.JFrame {
          dispose();
     }//GEN-LAST:event_jAdPopularityPanelMousePressed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jCountyBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCountyBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jCountyBoxActionPerformed
 
     
     void setColour(JPanel jp){
@@ -538,7 +540,7 @@ public class AdPopularity2 extends javax.swing.JFrame {
     private javax.swing.JLabel jAdSearch;
     private javax.swing.JPanel jAdSearchPanel;
     private javax.swing.JPanel jBackground;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jCountyBox;
     private javax.swing.JLabel jDragProgram;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

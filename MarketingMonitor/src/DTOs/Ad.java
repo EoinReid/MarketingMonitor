@@ -24,10 +24,13 @@ public class Ad {
     private String subSection;
     private String time;
     private int viewCount;
+    private String county;
+    private String ebay;
+    private String donedeal;
 
     //Need to add photo variable (Blob or as possible byte)
 
-    public Ad(Enum type, String title, double price, String section, String description, String id, Enum currency, String subSection, String time){
+    public Ad(Enum type, String title, double price, String section, String description, String id, Enum currency, String subSection, String time, String county, String ebay, String donedeal){
 
    
 
@@ -40,6 +43,9 @@ public class Ad {
         this.currency = currency;
         this.subSection = subSection;
         this.time = time;
+        this.county = county;
+        this.ebay = ebay;
+        this.donedeal = donedeal;
     }
     
     public Ad() 
@@ -53,10 +59,13 @@ public class Ad {
         this.price = price;
     }
 
-    public Ad(String title, double price, int viewCount) {
+    public Ad(String title, double price, int viewCount, String county, String ebay, String donedeal) {
         this.title = title;
         this.price = price;
         this.viewCount = viewCount;
+        this.county = county;
+        this.ebay = ebay;
+        this.donedeal = donedeal;
     }
 
     public Ad(String title, int viewCount) {
@@ -86,6 +95,40 @@ public class Ad {
         return price;
     }
 
+    public String getCounty() {
+    
+       return county;
+    }
+    
+    public void setCounty(String county) {
+    
+      this.county = county;
+    
+    }
+    
+      public String getEbay() {
+    
+       return ebay;
+    }
+    
+    public void setEbay(String ebay) {
+    
+      this.ebay = ebay;
+    
+    }
+    
+      public String getDoneDeal() {
+    
+       return donedeal;
+    }
+    
+    public void setDoneDeal(String donedeal) {
+    
+      this.donedeal = donedeal;
+    
+    }
+    
+        
     public void setPrice(double price) {
         this.price = price;
     }
