@@ -49,9 +49,6 @@ public class AdPopularity2 extends javax.swing.JFrame {
         jPriceComparePanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jPriceCompare = new javax.swing.JLabel();
-        jPriceComparePanel1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jPriceCompare1 = new javax.swing.JLabel();
         jAdPopularityPanel = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jAdPopularity = new javax.swing.JLabel();
@@ -60,6 +57,9 @@ public class AdPopularity2 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        JrefCode = new javax.swing.JTextField();
+        jSearchIcon = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jXbtn = new javax.swing.JLabel();
         jDragProgram = new javax.swing.JLabel();
         jTitleResult = new javax.swing.JLabel();
@@ -122,7 +122,7 @@ public class AdPopularity2 extends javax.swing.JFrame {
 
         jSidebar.add(jAdSearchPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 270, 39));
 
-        jPriceComparePanel.setBackground(new java.awt.Color(64, 43, 100));
+        jPriceComparePanel.setBackground(new java.awt.Color(85, 65, 118));
         jPriceComparePanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 jPriceComparePanelMousePressed(evt);
@@ -138,43 +138,6 @@ public class AdPopularity2 extends javax.swing.JFrame {
         jPriceCompare.setForeground(new java.awt.Color(255, 255, 255));
         jPriceCompare.setText("Price Compare");
 
-        jPriceComparePanel1.setBackground(new java.awt.Color(64, 43, 100));
-        jPriceComparePanel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPriceComparePanel1MousePressed(evt);
-            }
-        });
-
-        jLabel4.setBackground(new java.awt.Color(222, 222, 222));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/marketingmonitor/images/icons8_price_15px.png"))); // NOI18N
-
-        jPriceCompare1.setBackground(new java.awt.Color(255, 255, 255));
-        jPriceCompare1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jPriceCompare1.setForeground(new java.awt.Color(255, 255, 255));
-        jPriceCompare1.setText("Price Compare");
-
-        javax.swing.GroupLayout jPriceComparePanel1Layout = new javax.swing.GroupLayout(jPriceComparePanel1);
-        jPriceComparePanel1.setLayout(jPriceComparePanel1Layout);
-        jPriceComparePanel1Layout.setHorizontalGroup(
-            jPriceComparePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPriceComparePanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPriceCompare1)
-                .addContainerGap(107, Short.MAX_VALUE))
-        );
-        jPriceComparePanel1Layout.setVerticalGroup(
-            jPriceComparePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPriceComparePanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPriceComparePanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPriceCompare1))
-                .addGap(0, 8, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout jPriceComparePanelLayout = new javax.swing.GroupLayout(jPriceComparePanel);
         jPriceComparePanel.setLayout(jPriceComparePanelLayout);
         jPriceComparePanelLayout.setHorizontalGroup(
@@ -185,11 +148,6 @@ public class AdPopularity2 extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jPriceCompare)
                 .addContainerGap(107, Short.MAX_VALUE))
-            .addGroup(jPriceComparePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPriceComparePanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPriceComparePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPriceComparePanelLayout.setVerticalGroup(
             jPriceComparePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,16 +157,11 @@ public class AdPopularity2 extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPriceCompare))
                 .addGap(0, 8, Short.MAX_VALUE))
-            .addGroup(jPriceComparePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPriceComparePanelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPriceComparePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jSidebar.add(jPriceComparePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, -1));
+        jSidebar.add(jPriceComparePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, -1, -1));
 
-        jAdPopularityPanel.setBackground(new java.awt.Color(85, 65, 118));
+        jAdPopularityPanel.setBackground(new java.awt.Color(64, 43, 100));
         jAdPopularityPanel.setPreferredSize(new java.awt.Dimension(270, 39));
         jAdPopularityPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -238,15 +191,15 @@ public class AdPopularity2 extends javax.swing.JFrame {
         );
         jAdPopularityPanelLayout.setVerticalGroup(
             jAdPopularityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jAdPopularityPanelLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addGroup(jAdPopularityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
-                    .addComponent(jAdPopularity, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+            .addGroup(jAdPopularityPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jAdPopularityPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jAdPopularity))
+                .addGap(0, 8, Short.MAX_VALUE))
         );
 
-        jSidebar.add(jAdPopularityPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 270, 50));
+        jSidebar.add(jAdPopularityPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 270, 39));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jSidebar.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 200, 50));
@@ -265,12 +218,37 @@ public class AdPopularity2 extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Ad Popularity");
+        jLabel2.setText("Price Compare");
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("See your most & least popular ads below.");
+        jLabel8.setText("Enter keywords to compare prices, John.");
+
+        JrefCode.setText("         ");
+        JrefCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(54, 33, 89)));
+        JrefCode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JrefCodeActionPerformed(evt);
+            }
+        });
+
+        jSearchIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/marketingmonitor/images/icons8_search_20px.png"))); // NOI18N
+        jSearchIcon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jSearchIconMouseClicked(evt);
+            }
+        });
+
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down", "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford", "Wicklow" }));
+        jComboBox1.setToolTipText("");
+        jComboBox1.setBorder(null);
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -280,15 +258,28 @@ public class AdPopularity2 extends javax.swing.JFrame {
                 .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
-                    .addComponent(jLabel2))
-                .addContainerGap(464, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(JrefCode, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jSearchIcon)))
+                .addContainerGap(480, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                        .addComponent(JrefCode))
+                    .addComponent(jSearchIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel8)
                 .addContainerGap())
         );
@@ -332,39 +323,7 @@ public class AdPopularity2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-     public static void AdSearchScreen() {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdSearch.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AdPopularity2().setVisible(true);
-            }
-        });
-    }   
-    
-      public static void AdPopularityScreen() {
+     public static void AdPopularityScreen() {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -405,9 +364,61 @@ public class AdPopularity2 extends javax.swing.JFrame {
         this.setLocation(cordX,cordY);
     }//GEN-LAST:event_jDragProgramMouseDragged
 
+    private void JrefCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JrefCodeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JrefCodeActionPerformed
+
     private void jXbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jXbtnMouseClicked
         System.exit(0);
     }//GEN-LAST:event_jXbtnMouseClicked
+
+    private void jSearchIconMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jSearchIconMouseClicked
+     String refCode = JrefCode.getText();
+        System.out.println(refCode);
+       try {
+            Socket socket = new Socket("localhost", 8080);  // connect to server socket
+             OutputStream os = socket.getOutputStream();
+            
+            PrintWriter out = new PrintWriter(os, true);
+            String command = "AdSearch";
+            out.write(command +refCode+"\n");  // write command to socket, and newline terminator
+            out.flush();              // flush (force) the command over the socket     
+            
+      InputStream inputStream = socket.getInputStream();
+      Scanner socketReader = new Scanner(socket.getInputStream());
+      String response = socketReader.nextLine();
+      JsonReader jr = Json.createReader(new StringReader(response));
+      JsonObject jo = jr.readObject();
+            
+      JsonObject object = jo.getJsonObject("ads");
+      String type = object.getString("Type");
+      String title = object.getString("Title");
+      String priceResult = object.getString("Price");   
+      Double price = Double.parseDouble(priceResult);
+      String section = object.getString("Section");
+      String description = object.getString("Description");   
+      String Id = object.getString("Id"); 
+      String currency = object.getString("Currency"); 
+      String subsection = object.getString("Subsection");
+      String time = object.getString("Time");
+      String viewCount = object.getString("ViewCount");
+      
+      Ad a = new Ad(title,price);
+      String titleOut = a.getTitle();
+      Double priceOut = a.getPrice();      
+      String priceString = String.valueOf(priceOut);
+      String priceThree = "€" + priceString;
+      
+      jTitleResult.setText(titleOut);
+      jPriceResult.setText(priceThree);
+      
+     
+      
+      
+        } catch (IOException ex) {
+            Logger.getLogger(AdSearch.class.getName()).log(Level.SEVERE, null, ex);
+        }                                      
+    }//GEN-LAST:event_jSearchIconMouseClicked
 
      public static void PriceCompareScreen() {
         /* Set the Nimbus look and feel */
@@ -436,39 +447,37 @@ public class AdPopularity2 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdSearch2().setVisible(true);
+                new AdPopularity2().setVisible(true);
             }
         });
     }   
     private void jAdSearchPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdSearchPanelMouseClicked
-      
+       
     }//GEN-LAST:event_jAdSearchPanelMouseClicked
 
     private void jPriceComparePanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPriceComparePanelMousePressed
-        PriceCompare2 pc = new PriceCompare2();        
+        AdPopularity2 pc = new AdPopularity2();        
          pc.PriceCompareScreen(); 
          dispose();
       
     }//GEN-LAST:event_jPriceComparePanelMousePressed
 
     private void jAdSearchPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdSearchPanelMousePressed
-            AdSearch2 as = new AdSearch2();        
+          AdSearch2 as = new AdSearch2();        
          as.AdSearchScreen(); 
          dispose();
     
     }//GEN-LAST:event_jAdSearchPanelMousePressed
 
     private void jAdPopularityPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jAdPopularityPanelMousePressed
-            AdPopularity2 as = new AdPopularity2();        
-         as.AdSearchScreen(); 
+         AdPopularity2 ap = new AdPopularity2();        
+         ap.AdPopularityScreen(); 
          dispose();
     }//GEN-LAST:event_jAdPopularityPanelMousePressed
 
-    private void jPriceComparePanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPriceComparePanel1MousePressed
-        PriceCompare2 pc = new PriceCompare2();        
-         pc.PriceCompareScreen(); 
-         dispose();
-    }//GEN-LAST:event_jPriceComparePanel1MousePressed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     
     void setColour(JPanel jp){
@@ -523,26 +532,26 @@ public class AdPopularity2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField JrefCode;
     private javax.swing.JLabel jAdPopularity;
     private javax.swing.JPanel jAdPopularityPanel;
     private javax.swing.JLabel jAdSearch;
     private javax.swing.JPanel jAdSearchPanel;
     private javax.swing.JPanel jBackground;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jDragProgram;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jPriceCompare;
-    private javax.swing.JLabel jPriceCompare1;
     private javax.swing.JPanel jPriceComparePanel;
-    private javax.swing.JPanel jPriceComparePanel1;
     private javax.swing.JLabel jPriceResult;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel jSearchIcon;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JPanel jSidebar;
     private javax.swing.JLabel jTitleResult;
