@@ -8,13 +8,16 @@
  */
 package DAOs;
 
+import DTOs.Ad;
+import DTOs.User;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import Exceptions.DaoException;
+import java.util.List;
 
-public class MySqlDao 
+public class MySqlDao
 {
     public Connection getConnection() throws DaoException 
     {
@@ -59,4 +62,5 @@ public class MySqlDao
             System.exit(1);
         }
     }   
+
 }

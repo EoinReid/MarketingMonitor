@@ -19,15 +19,18 @@ public class Ad {
     private double price;
     private String section;
     private String description;
-    private int id;
+    private String id;
     private Enum currency;
     private String subSection;
-    private Timestamp time;
+    private String time;
     private int viewCount;
+    private String county;
+    private String ebay;
+    private String donedeal;
 
     //Need to add photo variable (Blob or as possible byte)
 
-    public Ad(Enum type, String title, double price, String section, String description, int id, Enum currency, String subSection, Timestamp time){
+    public Ad(Enum type, String title, double price, String section, String description, String id, Enum currency, String subSection, String time, String county, String ebay, String donedeal){
 
    
 
@@ -40,6 +43,9 @@ public class Ad {
         this.currency = currency;
         this.subSection = subSection;
         this.time = time;
+        this.county = county;
+        this.ebay = ebay;
+        this.donedeal = donedeal;
     }
     
     public Ad() 
@@ -53,10 +59,18 @@ public class Ad {
         this.price = price;
     }
 
-    public Ad(String title, double price, int viewCount) {
+    public Ad(String title, double price, int viewCount, String county, String ebay, String donedeal) {
         this.title = title;
         this.price = price;
         this.viewCount = viewCount;
+        this.county = county;
+        this.ebay = ebay;
+        this.donedeal = donedeal;
+    }
+
+    public Ad(String title, int viewCount) {
+       this.title = title;
+       this.viewCount = viewCount;
     }
     
     
@@ -81,6 +95,40 @@ public class Ad {
         return price;
     }
 
+    public String getCounty() {
+    
+       return county;
+    }
+    
+    public void setCounty(String county) {
+    
+      this.county = county;
+    
+    }
+    
+      public String getEbay() {
+    
+       return ebay;
+    }
+    
+    public void setEbay(String ebay) {
+    
+      this.ebay = ebay;
+    
+    }
+    
+      public String getDoneDeal() {
+    
+       return donedeal;
+    }
+    
+    public void setDoneDeal(String donedeal) {
+    
+      this.donedeal = donedeal;
+    
+    }
+    
+        
     public void setPrice(double price) {
         this.price = price;
     }
@@ -101,11 +149,11 @@ public class Ad {
         this.description = description;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -125,11 +173,11 @@ public class Ad {
         this.subSection = subSection;
     }
 
-    public Timestamp getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Timestamp time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -140,23 +188,26 @@ public class Ad {
     public void setViewCount(int viewCount) {
         this.viewCount = viewCount;
     }
-    
-    
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.type);
-        hash = 53 * hash + Objects.hashCode(this.title);
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
-        hash = 53 * hash + Objects.hashCode(this.section);
-        hash = 53 * hash + Objects.hashCode(this.description);
-        hash = 53 * hash + this.id;
-        hash = 53 * hash + Objects.hashCode(this.currency);
-        hash = 53 * hash + Objects.hashCode(this.subSection);
-        hash = 53 * hash + Objects.hashCode(this.time);
+        hash = 47 * hash + Objects.hashCode(this.type);
+        hash = 47 * hash + Objects.hashCode(this.title);
+        hash = 47 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
+        hash = 47 * hash + Objects.hashCode(this.section);
+        hash = 47 * hash + Objects.hashCode(this.description);
+        hash = 47 * hash + Objects.hashCode(this.id);
+        hash = 47 * hash + Objects.hashCode(this.currency);
+        hash = 47 * hash + Objects.hashCode(this.subSection);
+        hash = 47 * hash + Objects.hashCode(this.time);
+        hash = 47 * hash + this.viewCount;
         return hash;
     }
+    
+    
+
+   
 
     @Override
     public boolean equals(Object obj) {
